@@ -1,0 +1,2706 @@
+<!DOCTYPE html>
+<!-- saved from url=(0929)https://wix.ecwid.com/wix/app/store/?pageId=y4lys&compId=TPASection_kjdutk0m&viewerCompId=TPASection_kjdutk0m&siteRevision=179&viewMode=site&deviceType=desktop&locale=en&tz=America%2FLos_Angeles&width=1280&height=2097&instance=NCqyZqq6bC7M-9B5OwynL1fCQjIf1mjwQWEldMwlTtA.eyJpbnN0YW5jZUlkIjoiMGQyMWQwNTgtYzZiZS00NmE5LThlOTctMTIxOTA0MzJhODJkIiwiYXBwRGVmSWQiOiIxMmYxZmJhYi04YjlkLTMwMDItODdiNS0yOTcyODk3ZTgzMTQiLCJzaWduRGF0ZSI6IjIwMjEtMDItMjNUMDY6MjQ6NDQuOTAzWiIsImRlbW9Nb2RlIjpmYWxzZSwiYWlkIjoiOWVlNWM1NDMtOGI5YS00OWE1LWIzYzgtYWZjMjc1Njg4ZmMyIiwic2l0ZU93bmVySWQiOiI3ZTY0NThjMC1kNTEyLTRmMGMtYjRhMi1kNzc4YzhlNDVlN2IifQ&currency=USD&currentCurrency=USD&vsi=f2672cc0-3e84-4a0b-b629-97e0e7021f23&commonConfig={%22brand%22%3A%22wix%22%2C%22bsi%22%3A%2267dd1c4e-dab7-4c9c-a642-f14e33465c49|4%22%2C%22BSI%22%3A%2267dd1c4e-dab7-4c9c-a642-f14e33465c49|4%22}&target=_top&section-url=https%3A%2F%2Fashifoods.wixsite.com%2Fcali%2Fonline-store%2F -->
+<html id="ecwid_html"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="referrer" content="origin">
+	<title>STORE | Ashi Foods</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script async="" src="./i.js.download"></script><script id="ecwid-wix-sdk-loader" type="text/javascript" src="./wix.min.js.download"></script>
+    <script src="./jquery.min.js.download"></script>
+	<script type="text/javascript" src="./storage.js.download"></script>
+	<link rel="stylesheet" type="text/css" href="./frontend.css">
+
+		<link rel="stylesheet" type="text/css" href="./new(1)">
+	<script type="text/javascript">
+		window.onerror = function (errorMsg, url, lineNumber, column, errorObj) {
+			var message = 'Settings error: ' + errorMsg + ' Script: ' + url + ' Line: ' + lineNumber + ' Column: ' + column + ' StackTrace: ' +  errorObj;
+			$.ajax({
+				url: "/wix/app/log" + window.location.search,
+				type: "POST",
+				data: message,
+				contentType: "text/plain; charset=UTF-8"
+			});
+		}
+	</script>
+	<script type="text/javascript">
+		/**************************************************/
+		/************* OFFICIAL ECWID APP *****************/
+		/**************************************************/
+		try {
+			if(typeof Wix === 'undefined' || typeof Wix.Utils === 'undefined') {
+				var url = window.location.href;
+				var match = url.match(/sdkerror=\d+/);
+
+				if (match != null) {
+					var errCount = parseInt(match[0].replace("sdkerror=", ""), 10);
+					if (errCount < 10) {
+						window.location.href = url.replace(match[0], "sdkerror=" + (errCount + 1));
+					}
+					if (errCount == 10) {
+						$(document).ready(function() {
+							var timings = "";
+							if (performance && performance.getEntries) {
+								performance.getEntries().forEach(function(i) {
+									timings += "dur: " + i.duration.toFixed(2)
+											+ " start: " + i.startTime.toFixed(2)
+											+ " name: " + i.name + "\n";
+								});
+
+							}
+
+							var wixUndefinedOnReady = (typeof Wix === 'undefined');
+							var wixUtilsUndefinedOnReady = wixUndefinedOnReady || (typeof Wix.Utils === 'undefined');
+							var wixSdkLoaderElement = document.getElementById("ecwid-wix-sdk-loader");
+							var wixSdkLoaderElementHtml = (wixSdkLoaderElement || {} ).outerHTML;
+							var logMessage = "Wix or Wix.Utils is undefined at least 10 times." +
+									" wixSdkLoaderElementHtml: " + wixSdkLoaderElementHtml +
+									" Agent: " + navigator.userAgent +
+									" wixUndefinedOnReady: " + wixUndefinedOnReady +
+									" wixUtilsUndefinedOnReady: " + wixUtilsUndefinedOnReady +
+									" timings: " + timings;
+							$.ajax({
+								url: "/wix/app/log" + window.location.search,
+								type: "PUT",
+								data: logMessage,
+								contentType: "text/plain; charset=UTF-8"
+							});
+						});
+					}
+				} else {
+					var sdkerror = (url.split("?")[1] ? '&' : '?') + "sdkerror=1";
+					var i = url.indexOf('#');
+					if (i != -1) {
+						var parts = [url.slice(0,i), url.slice(i+1)];
+						window.location.href = parts[0] + sdkerror + '#' + parts[1];
+					} else {
+						window.location.href = url + sdkerror;
+					}
+				}
+			}
+		} catch(e) {
+		}
+
+		// Так как у нас изначально пустой тайтл, ставим в него название магазина, которое берем у Викса
+		Wix.getSiteInfo(function(siteInfo) {
+			if (!!siteInfo.pageTitle) {
+				document.title = siteInfo.pageTitle;
+			}
+		});
+
+		function getWixTop(callback) {
+			Wix.getBoundingRectAndOffsets(function (appData) {
+				var top = appData && appData.offsets ? appData.offsets.y : 0;
+				Wix.getAdsOnPage(function (adsData) {
+					//а в виксе может быть реклама, ее высоту тоже надо учитывать %(
+					var adsHeight = adsData && adsData.top && adsData.top.height ? adsData.top.height : 0;
+					top -= adsHeight;
+					callback(top)
+				});
+			});
+		}
+
+		function isIOs() {
+			var userAgent = window.navigator.userAgent
+			return !!(isIPad() || userAgent.match(/iPhone/i))
+		}
+
+		function isSafari() {
+			var safari = /AppleWebKit\//.test(navigator.userAgent) && /Safari\//.test(navigator.userAgent);
+			var chrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+			return safari && !chrome;
+		}
+
+		function isDebugActive() {
+			var referrer = document.referrer.split("?")[1] || "";
+			return referrer.indexOf("debug=1") > -1;
+		}
+
+		function isInteger(arg) {
+			return arg === parseInt(arg);
+		}
+
+		function isIPad() {
+			var userAgent = window.navigator.userAgent
+			return !!userAgent.match(/iPad/i)
+		}
+		function setCookie(cookieName, cookieValue, cookieExpire) {
+			var expire = new Date();
+			expire.setDate(expire.getDate() + cookieExpire);
+			var value = escape(cookieValue) + ((cookieExpire == null) ? "" : "; expires=" + expire.toUTCString());
+			document.cookie = cookieName + "=" + value;
+		}
+		function getApiUrl(endpoint) {
+			return endpoint + '?instance=NCqyZqq6bC7M-9B5OwynL1fCQjIf1mjwQWEldMwlTtA.eyJpbnN0YW5jZUlkIjoiMGQyMWQwNTgtYzZiZS00NmE5LThlOTctMTIxOTA0MzJhODJkIiwiYXBwRGVmSWQiOiIxMmYxZmJhYi04YjlkLTMwMDItODdiNS0yOTcyODk3ZTgzMTQiLCJzaWduRGF0ZSI6IjIwMjEtMDItMjNUMDY6MjQ6NDQuOTAzWiIsImRlbW9Nb2RlIjpmYWxzZSwiYWlkIjoiOWVlNWM1NDMtOGI5YS00OWE1LWIzYzgtYWZjMjc1Njg4ZmMyIiwic2l0ZU93bmVySWQiOiI3ZTY0NThjMC1kNTEyLTRmMGMtYjRhMi1kNzc4YzhlNDVlN2IifQ';
+		}
+		function hex2rgba(hex, opacity) {
+			hex = hex.replace('#', '');
+			var r = parseInt(hex.substring(0, 2), 16);
+			var g = parseInt(hex.substring(2, 4), 16);
+			var b = parseInt(hex.substring(4, 6), 16);
+
+			var result = 'rgba(' + r + ',' + g + ',' + b + ',' + opacity / 100 + ')';
+			return result;
+		}
+
+		function updateOpacity(color, opacity) {
+			if (!color) {
+				return null;
+			}
+
+			if (color.indexOf('#') === 0) {
+				return hex2rgba(color, opacity)
+			}
+
+			if (color.indexOf('rgba(') === 0) {
+				var colors = color.replace('rgba(', '').split(',').map(function(x){ return parseInt(x, 10); })
+				var r = colors[0];
+				var g = colors[1];
+				var b = colors[2];
+				return 'rgba(' + r + ',' + g + ',' + b + ',' + opacity / 100 + ')';
+			}
+		}
+
+		function getConsts() {
+			return {
+				booleanValues: [true, false],
+				sizeValues: ['LARGE', 'MEDIUM', 'SMALL'],
+				listLayoutValues: ['CENTER', 'LEFT', 'RIGHT', 'JUSTIFY'],
+				detailsLayoutValues: ['TWO_COLUMNS_SIDEBAR_ON_THE_RIGHT', 'TWO_COLUMNS_SIDEBAR_ON_THE_RIGHT_BELOW_IMAGE', 'TWO_COLUMNS_SIDEBAR_ON_THE_LEFT', 'THREE_COLUMNS_SIDEBAR_ON_THE_RIGHT'],
+				galleryLayoutValues: ['IMAGE_SINGLE_THUMBNAILS_HORIZONTAL', 'IMAGE_SINGLE_THUMBNAILS_VERTICAL', 'IMAGE_FEED'],
+				aspectRatioValues: ['PORTRAIT_0667', 'PORTRAIT_075', 'SQUARE_1', 'LANDSCAPE_1333', 'LANDSCAPE_15'],
+				showValues: ['SHOW', 'HIDE', 'SHOW_ON_HOVER'],
+				positionValues: ['SHOW_ON_IMAGE', 'SHOW_BELOW_IMAGE', 'SHOW_ON_HOVER', 'HIDE', 'SHOW_TEXT_ONLY'],
+				viewValues: ['GRID', 'LIST', 'TABLE']
+			};
+		}
+
+        function toHex(str) {
+            try {
+                return unescape(encodeURIComponent(str))
+                        .split('')
+                        .map(function(v) {
+                            var s = v.charCodeAt(0).toString(16);
+                            while (s.length < 2) s = "0" + s;
+                            return s;
+                        }).join('');
+            } catch(e) {
+                window.console.error('invalid text input: ' + str, e);
+                return str;
+            }
+        }
+
+        function fromHex(hex) {
+            try {
+                return decodeURIComponent(hex.replace(/(..)/g,'%$1'));
+            } catch(e) {
+                window.console.error('invalid hex input: ' + hex, e);
+                return hex;
+            }
+        }
+
+        var lastPushTimestamp = 0;
+		var changeStateDelay = 200;
+        var lastRequestedState = null;
+
+        function defferChangeState(newState) {
+        	if (lastRequestedState == newState) {
+        		return;
+            }
+            lastRequestedState = newState;
+            deffer(function() {
+            	ecwidState.changeState(newState);
+            });
+        }
+
+		function deffer(callback) {
+			var diff = Date.now() - lastPushTimestamp;
+			if (diff >= changeStateDelay) {
+				lastPushTimestamp = Date.now();
+				callback.call();
+            } else {
+                setTimeout(function() {
+                	deffer(callback);
+                }, changeStateDelay);
+            }
+        }
+
+        var needToScroll = false;
+
+		function EcwidState() {
+			this.pushState = function(ecwidState) {
+				this.ecwidState = ecwidState;
+
+				if (/[ #%]/.test(ecwidState)) {
+                    Wix.pushState("hex:" + toHex(ecwidState))
+				} else {
+                    Wix.pushState(ecwidState)
+				}
+
+				needToScroll = true;
+				console && console.log("EcwidState: push ecwid state to wix: " + ecwidState)
+			}
+			this.changeState = function(newState) {
+				console && console.log("EcwidState: change state")
+
+				if (newState.startsWith("!%2F") || newState.startsWith("hex%3A")) {
+					newState = decodeURIComponent(newState);
+				}
+
+				if (this.ecwidState != null && this.ecwidState != newState) {
+					this.ecwidState = null;
+					return;
+				}
+
+				changeEcwidState(newState);
+				this.ecwidState = null;
+				console && console.log("EcwidState: change state to new state: " + newState)
+			}
+		}
+		var ecwidState = new EcwidState();
+		var updateHeightDelay = 50;
+		if (isIOs()){
+			updateHeightDelay = 150;
+		}
+		var storeUrlOnServer = "https://ashifoods.wixsite.com/cali/online-store";
+
+		var draftSettingsOnServer = null;
+		var draftSettingsSameAsPublished = true;
+
+		function isInsideWixEditor() {
+			return Wix.Utils.getViewMode() === 'editor' || Wix.Utils.getViewMode() === 'preview';
+		}
+
+		(function(){
+			window.EcwidLog = function (message) {
+				try {
+					var arg = Array.prototype.slice.call(arguments);
+					console && console.log.apply(this, arg);
+				} catch (e) {
+				}
+			}
+
+			var prevHeight = -1;
+			function updateWixHeight(height) {
+				var $body = $('body');
+				var wixDeviceType = Wix.Utils.getDeviceType();
+
+				function changeWixFrameHeight(height) {
+					if (prevHeight !== height) {
+						Wix.setHeight(height);
+						prevHeight = height;
+						EcwidLog("Wix " + wixDeviceType + " height change: " + height);
+					}
+				}
+
+				function calculateBodyHeight() {
+					var bottomSpace = 20;
+					var newHeight = $body.outerHeight(true);
+					if (!isIOs()) {
+						return newHeight;
+					}
+					if (!(prevHeight - bottomSpace < newHeight && newHeight < prevHeight + bottomSpace)) {
+						return newHeight + bottomSpace / 2;
+					}
+					return prevHeight
+				}
+
+				function calculateSslPopupBottom() {
+					var $sslPopup = $('div.ecwid-AddressForm-SSLencryptedPopup');
+					if ($sslPopup.length > 0) {
+						return $sslPopup.offset().top + $sslPopup.height();
+					}
+					return 0;
+				}
+
+				function calculateIframeBottom() {
+					var $iframeWidgetLift = $('.fb_iframe_widget_lift');
+					if ($iframeWidgetLift.length > 0) {
+						return $iframeWidgetLift.offset().top + $iframeWidgetLift.height();
+					}
+					return 0;
+				}
+
+				function calculatePopupBottom() {
+					var $ecwidPopup = $('.ecwid-popup');
+					var $ecwidPopupInner = $ecwidPopup.find('.ecwid-popup-touchLimiter > table');
+					if ($ecwidPopupInner.length > 0) {
+						var popupSpaces = $ecwidPopup.outerHeight(true) - $ecwidPopup.height();
+						return Math.max($ecwidPopupInner.outerHeight() + popupSpaces,
+								480  + 1);
+					}
+					return 0;
+				}
+
+				function calculateScrollHeight() {
+					if (isSafari()) {
+						if (document.body.scrollHeight === undefined && document.documentElement.scrollHeight === undefined) {
+							return 400;
+						} else {
+							var bodyScrollHeight = document.body.scrollHeight || Number.MAX_VALUE;
+							var documentElementScrollHeight = document.documentElement.scrollHeight || Number.MAX_VALUE;
+							return Math.min(bodyScrollHeight, documentElementScrollHeight);
+						}
+					}
+					return document.body.scrollHeight;
+				}
+
+				function getProductFiltersPopupHeight() {
+					if (document.getElementsByTagName('html')[0].classList.contains('ec-has-filters-popup')) {
+						var openedPopup = $('.ec-filters__wrap-inner');
+						var openedFilter = $('.ec-openable-block--opened .ec-openable-block__wrap-inner');
+
+						if (openedFilter.length > 0) {
+							return openedFilter[0].offsetHeight + 60
+						} else if (openedPopup.length > 0) {
+							return openedPopup[0].offsetHeight + 60
+						}
+					}
+					return 0;
+				}
+
+				var ua = navigator.userAgent.toLowerCase();
+				if (!(ua.indexOf("msie") !== -1 && document.documentMode <= 8)) {
+					$body.css('minHeight', '');
+				}
+
+				var bodyHeight = calculateBodyHeight();
+				var sslPopupBottom = calculateSslPopupBottom();
+				var iframeBottom = calculateIframeBottom();
+				var popupBottom = calculatePopupBottom();
+				var scrollHeight = calculateScrollHeight();
+
+				var ecwidHeight = Math.max(iframeBottom, bodyHeight, popupBottom, sslPopupBottom, scrollHeight);
+
+				var productFiltersPopupHeight = getProductFiltersPopupHeight();
+				if (productFiltersPopupHeight > 0) {
+					ecwidHeight = productFiltersPopupHeight
+				}
+
+				if ($('.ec-pika-single').height()) {
+					var pickupCalendarHeight = $('.ec-pika-single').position().top + $('.ec-pika-single').outerHeight(true);
+
+					if (pickupCalendarHeight > bodyHeight) {
+						ecwidHeight = pickupCalendarHeight + 30;
+					}
+				}
+
+				if (isInteger(height) && height > 0) {
+					ecwidHeight = height;
+				}
+
+				if ((ecwidHeight !== $(window).height() && $(window).height() !== 0) || (ecwidHeight !== prevHeight)) {
+					if(isDebugActive()) {
+						EcwidLog("Wix " + wixDeviceType + "height stats iframeBorrom="+iframeBottom+" bodyHeight="+bodyHeight+" popupBottom="+popupBottom+" windowHeight="+$(window).height()+" prevHeight="+prevHeight);
+					}
+					changeWixFrameHeight(ecwidHeight);
+				}
+			}
+
+			var updateInterval = null;
+			function startPeriodicWixHeightUpdate(delay) {
+				stopPeriodicWixHeightUpdate();
+				if (!isInteger(delay)) {
+					delay = updateHeightDelay;
+				}
+
+				updateInterval = setInterval(updateWixHeight, delay);
+			}
+
+			function stopPeriodicWixHeightUpdate() {
+				if (!!updateInterval) {
+					clearInterval(updateInterval);
+				}
+			}
+
+			startPeriodicWixHeightUpdate(updateHeightDelay);
+			window.ec = window.ec || {};
+			window.ec.wix = window.ec.wix || {};
+			window.ec.wix.updateWixHeight = updateWixHeight;
+			window.ec.wix.startPeriodicWixHeightUpdate = startPeriodicWixHeightUpdate
+			window.ec.wix.stopPeriodicWixHeightUpdate = stopPeriodicWixHeightUpdate
+
+
+			window.ecwidUseExternalReferrer = true
+			Wix.getSiteInfo(function(siteInfo){
+				var ref = new function(){
+					var value = siteInfo.referer
+					this.func = function(){
+						if (typeof(Ecwid) === "undefined" || !Ecwid.saveReferrer) {
+							setTimeout(ref.func, 1000)
+							return
+						}
+						Ecwid.saveReferrer(value)
+					}
+				}
+
+				ref.func()
+			})
+
+			var currentStorePageId = 'y4lys';
+			Wix.getCurrentPageId(function(pageId) {
+				if (pageId !== 'y4lys') {
+					currentStorePageId = pageId;
+					$.ajax({
+						type:'PUT',
+						url: getApiUrl('change-page-id'),
+						data: JSON.stringify({
+							pageId: pageId
+						}),
+						dataType: 'json',
+						contentType: 'application/json; charset=UTF-8'
+					})
+				}
+			});
+
+			$(document).ready(function() {
+
+				var lastAppliedParams = null;
+
+
+					function getMainPageCategoryId() {
+						var categoryId = 0;
+						if (!categoryId || categoryId < 0) {
+							categoryId = 0;
+						}
+						return categoryId;
+					}
+
+
+					window.ec = window.ec || {};
+					window.ec.storefront = window.ec.storefront || {};
+					window.ec.storefront.staticPages = window.ec.storefront.staticPages || {};
+					window.ec.storefront.staticPages.staticStorefrontEnabled = true;
+					window.ec.storefront.staticPages.staticContainerID = "static-html";
+					window.ec.storefront.staticPages.dynamicContainerID = "main";
+					window.ec.storefront.staticPages.mainCategoryId = getMainPageCategoryId();
+					window.ec.storefront.staticPages.onClickCallback = function () {
+						getWixTop(function (top) {
+							Wix.scrollTo(0, top);
+						});
+					};
+					(function () {
+	var isTouchDevice = false;
+	var staticId = null;
+	var staticContentClass = 'static-content';
+	var dynamicId = null;
+	var ecwidPageOpened = false;
+	var autoSwitchStaticToDynamicWhenReady = false;
+	var autoSwitchStaticToDynamicWhenReadyDefault = false;
+	var invisibleDynamicContainerStyle = "display: block !important; height: 0 !important; max-height: 0 !important; min-height: 0 !important; overflow-y: auto !important;";
+	var mainCategoryId = 0;
+	var initialCategoryOffset = 0;
+
+	function find(selector) {
+		return document.querySelector(selector);
+	}
+
+	function isDynamicMode() {
+		function isVisible(elem) {
+			return !!(elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length);
+		}
+
+		var staticHtml = find('#' + staticId);
+		return !staticHtml || !isVisible(staticHtml);
+	}
+
+	function processStaticHomePage() {
+
+		window.ec = window.ec || {};
+		window.ec.storefront = window.ec.storefront || {};
+		window.ec.storefront.staticPages = window.ec.storefront.staticPages || {};
+
+
+		window.ec.storefront.staticPages.switchStaticToDynamic = switchToDynamicMode;
+
+		function isRootCategory() {
+			return window.location.hash === '' || window.location.hash.indexOf("#!/c/0/") !== -1;
+		}
+
+		function onDocumentReady(fn) {
+			if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+				fn();
+			} else {
+				document.addEventListener('DOMContentLoaded', fn);
+			}
+		}
+
+		onDocumentReady(function () {
+			var staticStorefrontEnabled = window.ec.storefront.staticPages.staticStorefrontEnabled || false;
+
+			if (staticStorefrontEnabled !== true) {
+				return;
+			}
+
+			staticId = ec.storefront.staticPages.staticContainerID;
+			dynamicId = ec.storefront.staticPages.dynamicContainerID;
+			if (!staticId || !document.querySelector("#" + staticId)) {
+				if (!!console) {
+					console.warn("Static storefront is enabled, but no staticContainerID is provided or container is not present");
+				}
+				return;
+			}
+			if (!dynamicId || !document.querySelector("#" + dynamicId)) {
+				if (!!console) {
+					console.warn("Static storefront is enabled, but no dynamicContainerID is provided or container is not present");
+				}
+				return;
+			}
+
+			var mainCategoryIdFromConfig = ec.storefront.staticPages.mainCategoryId;
+			if (mainCategoryIdFromConfig) {
+				mainCategoryId = mainCategoryIdFromConfig;
+			}
+
+
+			var autoSwitchStaticToDynamicWhenReadyFromConfig = ec.storefront.staticPages.autoSwitchStaticToDynamicWhenReady;
+			if (autoSwitchStaticToDynamicWhenReadyFromConfig) {
+				autoSwitchStaticToDynamicWhenReady = autoSwitchStaticToDynamicWhenReadyFromConfig;
+			} else {
+				autoSwitchStaticToDynamicWhenReady = autoSwitchStaticToDynamicWhenReadyDefault;
+			}
+
+			if (ec.storefront.staticPages.initialCategoryOffset) {
+				initialCategoryOffset = ec.storefront.staticPages.initialCategoryOffset;
+			}
+
+			hideStorefront();
+			showStaticHtml();
+
+			window.ec.config = window.ec.config || {};
+			window.ec.config.navigation_scrolling = "DISABLED";
+			if (!!('ontouchstart' in window)) {
+				isTouchDevice = true;
+				document.body.classList.add('touchable');
+			}
+
+			if (!isRootCategory()) {
+				hideStorefront();
+				switchToDynamicMode();
+				return;
+			}
+
+			addStaticPageHandlers();
+
+			function setupAfterEcwidLoaded() {
+
+				// if a store is opened for a client, then the storeClosed won't be true
+				// if a store is opened for a client and we've uploaded a closed banner, then we check it in dynamic
+				Ecwid.OnAPILoaded.add(function () {
+					var storeClosed = window.ecwid_initial_data.data.storeClosed;
+					var storeClosedWrapper = document.querySelectorAll('.ecwid-maintenance-wrapper');
+					var storeNotClosedAndWrapperExists = !storeClosed && storeClosedWrapper.length > 0;
+
+					if (!isDynamicMode() && (storeClosed || storeNotClosedAndWrapperExists)) {
+						switchToDynamicMode();
+					}
+				});
+
+				Ecwid.OnPageLoad.add(function (openedPage) {
+					if (isDynamicMode()) {
+						// if we've already switched to dynamic, we don't need to dispatch this event anymore
+						return;
+					}
+
+					if (openedPage.type === "CART"
+						|| openedPage.type === "ORDERS"
+						|| openedPage.type === "FAVORITES"
+						|| openedPage.type === "SIGN_IN"
+						|| openedPage.type === "RESET_PASSWORD") {
+						// static links from bottom of the page should be processed before page load event finishes,
+						// so self pre-opening scroll didn't make the page jump
+						switchToDynamicMode();
+					}
+				});
+
+				addOnPageLoadedCallback(function (openedPage) {
+					if (isDynamicMode()) {
+						// if we've already switched to dynamic, we don't need to dispatch this event anymore
+						return;
+					}
+
+					if (autoSwitchStaticToDynamicWhenReady) {
+						switchToDynamicWhenReadyWithRetries(10);
+						return;
+					}
+
+					if (!ecwidPageOpened
+						&& openedPage.type === "CATEGORY"
+						&& openedPage.categoryId === mainCategoryId
+						&& openedPage.offset === initialCategoryOffset) {
+
+						// we don't need to dispatch root category loading,
+						// since our static contents covers it for the first time
+						return;
+					}
+					// other than self we must show opened page in dynamic view,
+					// because static view contains only root category page
+					switchToDynamicMode();
+				}, 0);
+			}
+
+			function switchToDynamicWhenReadyWithRetries(retry) {
+				if (retry <= 0) {
+					switchToDynamicMode();
+					return;
+				}
+
+				var allImagesLoaded = allImagesLoadedInDynamicMarkup();
+				if (!allImagesLoaded) {
+					setTimeout(function () {
+						switchToDynamicWhenReadyWithRetries(retry - 1);
+					}, 100);
+					return
+				}
+
+				switchToDynamicMode();
+			}
+
+			function allImagesLoadedInDynamicMarkup() {
+				if (!dynamicId) {
+					return true;
+				}
+
+				try {
+					var firstNotLoadedCategory = document.querySelector('#' + dynamicId + ' .grid-category--loading');
+					if (firstNotLoadedCategory != null) {
+						return false;
+					}
+
+					var firstNotLoadedProduct = document.querySelector('#' + dynamicId + ' .grid-product--loading');
+					if (firstNotLoadedProduct != null) {
+						return false;
+					}
+				} catch (e) {
+				}
+
+				return true;
+			}
+
+			function ecwidLoaded() {
+				return !!Ecwid && !!Ecwid.OnAPILoaded && !!Ecwid.OnAPILoaded.add;
+			}
+
+			if (ecwidLoaded()) {
+				setupAfterEcwidLoaded();
+			} else {
+				var setupIntervalId = setInterval(function () {
+					if (ecwidLoaded()) {
+						setupAfterEcwidLoaded();
+						clearInterval(setupIntervalId);
+					}
+				}, 100);
+			}
+		});
+	}
+
+	function addStaticPageHandlers() {
+		function addClickHandlers(selector, elementProcessor) {
+			var elements = document.querySelectorAll(selector);
+			for (var i = 0; i < elements.length; i++) {
+				elementProcessor(elements[i]);
+			}
+		}
+
+		addClickHandlers('#' + staticId + ' .ec-breadcrumbs a', function (element) {
+			var categoryId = element.getAttribute('categoryId');
+			if (categoryId !== mainCategoryId) {
+				addStaticClickEvent(element, openEcwidPage('category', {'id': categoryId}));
+			}
+		});
+
+		var orderByOptions = document.querySelector('#' + staticId + ' .grid__sort select');
+		if (!!orderByOptions) {
+			orderByOptions.addEventListener("change", function (event) {
+				openEcwidPage('category', {
+					'id': mainCategoryId,
+					'sort': orderByOptions.value
+				})(event);
+			});
+		}
+
+		addClickHandlers('#' + staticId + ' .grid__sort .grid-sort__item--filter', function (element) {
+			addStaticClickEvent(element, function () {
+				addOnPageLoadedCallback(function () {
+					if (isDynamicMode()) {
+						return;
+					}
+					switchToDynamicMode();
+					Ecwid.showProductFilters();
+				}, 0);
+			});
+		});
+
+		addClickHandlers('#' + staticId + ' .grid-category__card a', function (element) {
+			var categoryId = element.getAttribute('data-category-id');
+			addStaticClickEvent(element, openEcwidPage('category', {'id': categoryId}));
+		});
+
+		addClickHandlers('#' + staticId + ' .grid-product:not(.grid-product--view-all) a', function (element) {
+			var productId = element.getAttribute('data-product-id');
+			addStaticClickEvent(element, openEcwidPage('product', {'id': productId}));
+		});
+
+		addClickHandlers('#' + staticId + ' .grid-product:not(.grid-product--view-all) .grid-product__wrap[data-product-id]', function (element) {
+			var productId = element.getAttribute('data-product-id');
+			addStaticClickEvent(element, openEcwidPage('product', {'id': productId}));
+		});
+
+		addClickHandlers('#' + staticId + ' .grid-product--view-all a' , function (element) {
+			var categoryId = element.getAttribute('data-category-id');
+			addStaticClickEvent(element, openEcwidPage('category', {'id': categoryId}));
+		})
+
+		addClickHandlers('#' + staticId + ' .grid-product__buy-now', function (element) {
+			var productId = element.getAttribute('data-product-id');
+			addStaticClickEvent(element, openEcwidPage('product', {'id': productId}));
+		});
+
+		addClickHandlers('#' + staticId + ' .footer__link--gift-card', function (element) {
+			var productId = element.getAttribute('data-product-id');
+			addStaticClickEvent(element, openEcwidPage('product', {'id': productId}));
+		});
+
+		addClickHandlers('#' + staticId + ' .footer__link--all-products', function (element) {
+			addStaticClickEvent(element, openEcwidPage('search'));
+		});
+
+		addClickHandlers('#' + staticId + ' .footer__link--track-order', function (element) {
+			addStaticClickEvent(element, openEcwidPage('account/orders'));
+		});
+
+		addClickHandlers('#' + staticId + ' .footer__link--shopping-favorites', function (element) {
+			addStaticClickEvent(element, openEcwidPage('account/favorites'));
+		});
+
+		addClickHandlers('#' + staticId + ' .footer__link--shopping-cart', function (element) {
+			addStaticClickEvent(element, openEcwidPage('cart'));
+		});
+
+		addClickHandlers('#' + staticId + ' .footer__link--sigin-in', function (element) {
+			addStaticClickEvent(element, openEcwidPage('signin'));
+		});
+
+		addClickHandlers('#' + staticId + ' .footer__link--my-account', function (element) {
+			addStaticClickEvent(element, openEcwidPage('account/settings'));
+		});
+
+		addClickHandlers('#' + staticId + ' .pager__button', function (element) {
+			var pageNumber = element.getAttribute('data-page-number') || 2;
+			addStaticClickEvent(element, openEcwidPage('category', {
+				'id': mainCategoryId,
+				'page': pageNumber
+			}));
+		});
+
+		addClickHandlers('#' + staticId + ' .pager__number', function (element) {
+			var pageNumber = element.getAttribute('data-page-number');
+			addStaticClickEvent(element, openEcwidPage('category', {
+				'id': mainCategoryId,
+				'page': pageNumber
+			}));
+		});
+
+	}
+
+	function addStaticClickEvent(el, callback) {
+		var x = 0,
+			y = 0,
+			dx = 0,
+			dy = 0,
+			isTap = false;
+
+		if (isTouchDevice) {
+			el.addEventListener('touchstart', function (e) {
+				isTap = true;
+				x = e.touches[0].clientX;
+				y = e.touches[0].clientY;
+				dx = 0;
+				dy = 0;
+			});
+			el.addEventListener('touchmove', function (e) {
+				dx = e.changedTouches[0].clientX - x;
+				dy = e.changedTouches[0].clientY - y;
+			});
+			el.addEventListener('touchend', function (e) {
+				if (isTap && Math.abs(dx) < 10 && Math.abs(dy) < 10) {
+					callback(e);
+				}
+			});
+		}
+
+		el.addEventListener('click', function (e) {
+			if (!isTap) {
+				callback(e);
+			} else {
+				isTap = false;
+			}
+		});
+	}
+
+	function openEcwidPage(page, params) {
+		return function (e) {
+			if (isCtrlClickOnProductEvent(page, e)) {
+				// In case product element in grid was clicked with ctrl/meta key, do not invoke e.preventDefault()
+				// and do nothing. Event will be handled and processed by default ctrl/meta + click handler on
+				// underlying <a> element. New background tab with product page will be opened.
+				return;
+			}
+
+			e.preventDefault();
+			// we must wait for Ecwid first page to be ready before changing it
+			addOnPageLoadedCallback(function () {
+				if (isDynamicMode()) {
+					// if we've already switched to dynamic, we don't need to dispatch this event anymore
+					return;
+				}
+				var onClickCallback = window.ec.storefront.staticPages.onClickCallback;
+				if (!autoSwitchStaticToDynamicWhenReady && onClickCallback) {
+					onClickCallback();
+				}
+				ecwidPageOpened = true;
+				var element = find('#' + staticId + " .ec-wrapper");
+				if (!!element) {
+					elementsClassListAction([element], function(list) {
+						list.add("ec-wrapper--transition");
+					});
+				}
+				Ecwid.openPage(page, params);
+			}, 0);
+		}
+	}
+
+	function isCtrlClickOnProductEvent(page, event) {
+		return page === 'product' && (event.ctrlKey || event.metaKey)
+	}
+
+	function addOnPageLoadedCallback(callback, attempt) {
+		// Иногда при загрузке витрины (статической версии) на странице еще не определен Ecwid.OnPageLoaded.
+		// Надо подождать пока он появится, отложенно отработать клик пользователя (например открыть детали товара).
+		// Время ретраев - 2 секунды. 50 ms * 40 попыток = 2000 ms.
+
+		if (attempt >= 40) {
+			if (!!console) {
+				console.warn("failed to add Ecwid.OnPageLoaded callback");
+			}
+			return;
+		}
+
+		if (typeof(Ecwid) == 'object' && typeof(Ecwid.OnPageLoaded) == 'object') {
+			Ecwid.OnPageLoaded.add(callback);
+		} else {
+			setTimeout(function () {
+				addOnPageLoadedCallback(callback, attempt + 1);
+			}, 50);
+		}
+	}
+
+	function hideStorefront() {
+		var dynamicEl = find('#' + dynamicId);
+		var currentStyleAttribute = dynamicEl.getAttribute("style") || "";
+
+		dynamicEl.setAttribute("style", currentStyleAttribute + invisibleDynamicContainerStyle);
+	}
+
+	function showStorefront() {
+		var dynamicEl = find('#' + dynamicId);
+		// disable zero-height trick to show the storefront
+		dynamicEl.style.height = "";
+		dynamicEl.style.maxHeight = "";
+		dynamicEl.style.minHeight = "";
+		dynamicEl.style.overflowY = "";
+		dynamicEl.style.display = "block";
+	}
+
+	function hideStaticHtml() {
+		var staticEl = find('#' + staticId);
+		if (!!staticEl) {
+			staticEl.style.opacity = 0;
+			staticEl.style.display = 'none';
+		}
+	}
+
+	function showStaticHtml() {
+		var element = find('#' + staticId + " ." + staticContentClass);
+		if (!!element) {
+			element.style.opacity = 1;
+		}
+	}
+
+	function switchToDynamicMode() {
+		requestAnimationFrame(function () {
+			removeClassAnimationForAutoSwitchToDynamic();
+			showStorefront();
+			hideStaticHtml();
+
+			var staticEl = find('#' + staticId);
+			if (staticEl && staticEl.parentNode) {
+				staticEl.parentNode.removeChild(staticEl);
+			}
+			var switchToDynamicCallback = window.ec.storefront.staticPages.switchToDynamicCallback;
+
+			var element = find('#' + staticId + " .ec-wrapper");
+			if (!!element) {
+				elementsClassListAction([element], function(list) {
+					list.remove("ec-wrapper--transition");
+				});
+			}
+			if (!autoSwitchStaticToDynamicWhenReady && switchToDynamicCallback) {
+				switchToDynamicCallback();
+			}
+		});
+	}
+
+	function removeClassAnimationForAutoSwitchToDynamic() {
+		if (!autoSwitchStaticToDynamicWhenReady) {
+			return;
+		}
+		var wrapers = document.querySelectorAll('.ec-wrapper--animated-transitions');
+		var arrWrapers = Array.prototype.slice.call(wrapers);
+		elementsClassListAction(arrWrapers, function(list) {
+			list.remove('ec-wrapper--animated-transitions');
+		});
+	}
+
+	function elementsClassListAction(elements, callback) {
+		if (!(Array.isArray(elements))) {
+			return;
+		}
+		for (var key in elements) {
+			var list = elements[key].classList;
+			if (typeof list != "undefined") {
+				callback(list);
+			}
+		}
+	}
+
+	processStaticHomePage();
+
+})();
+
+					if (Wix.Utils.getViewMode() == 'editor') {
+						window.ec.storefront.staticPages.switchStaticToDynamic();
+					}
+
+				updateHeightDelay = updateHeightDelay * 10;
+				startPeriodicWixHeightUpdate(updateHeightDelay);
+
+				function ensureCurrentPageId(callback) {
+					if (!currentStorePageId) {
+						Wix.getCurrentPageId(function(wixPageId) {
+							currentStorePageId = wixPageId;
+							callback();
+						});
+					} else {
+						callback();
+					}
+				}
+
+				if (isIOs()) {
+					var $el = $('body').find('*')
+					$el.on('touchstart', function() {
+						if(isDebugActive()) $($el).data("EcwidWixTouchStart",new Date().getTime())
+					}).on('touchend', function() {
+						if(isDebugActive()) EcwidLog("touch time is",new Date().getTime() - $($el).data("EcwidWixTouchStart"))
+					})
+				}
+
+				if (Wix.Utils.getViewMode() === 'editor') {
+					var alertPopup = new function () {
+						var $el = $('.alert')
+						this.show = function () {
+							if (false)
+								$($el).slideDown(600);
+							else
+								this.hide();
+						}
+						this.hide = function () {
+							$($el).slideUp();
+						}
+					}
+					alertPopup.show();
+				}
+
+				function saveDraftSettings() {
+					if (!lastAppliedParams) {
+						return;
+					}
+					var profile = buildProfile(lastAppliedParams);
+					saveProfile(profile, "saveSettings");
+				}
+
+				function publishDraft(pageUrl) {
+					$.get('/wix/app/profile?instance=NCqyZqq6bC7M-9B5OwynL1fCQjIf1mjwQWEldMwlTtA.eyJpbnN0YW5jZUlkIjoiMGQyMWQwNTgtYzZiZS00NmE5LThlOTctMTIxOTA0MzJhODJkIiwiYXBwRGVmSWQiOiIxMmYxZmJhYi04YjlkLTMwMDItODdiNS0yOTcyODk3ZTgzMTQiLCJzaWduRGF0ZSI6IjIwMjEtMDItMjNUMDY6MjQ6NDQuOTAzWiIsImRlbW9Nb2RlIjpmYWxzZSwiYWlkIjoiOWVlNWM1NDMtOGI5YS00OWE1LWIzYzgtYWZjMjc1Njg4ZmMyIiwic2l0ZU93bmVySWQiOiI3ZTY0NThjMC1kNTEyLTRmMGMtYjRhMi1kNzc4YzhlNDVlN2IifQ', function (serverProfileJson, status) {
+						if (status !== 'success') {
+							if (window.console) window.console.log("Unable to get draftSettings from server: " + status);
+							return
+						}
+
+						var profile = {};
+						profile.publishedSettings = $.extend({}, serverProfileJson.draftSettings);
+
+						if (storeUrlOnServer !== pageUrl) {
+							profile.storeUrl = pageUrl;
+						}
+
+						$.ajax({
+							type: 'PUT',
+							url: '/wix/app/profile?instance=NCqyZqq6bC7M-9B5OwynL1fCQjIf1mjwQWEldMwlTtA.eyJpbnN0YW5jZUlkIjoiMGQyMWQwNTgtYzZiZS00NmE5LThlOTctMTIxOTA0MzJhODJkIiwiYXBwRGVmSWQiOiIxMmYxZmJhYi04YjlkLTMwMDItODdiNS0yOTcyODk3ZTgzMTQiLCJzaWduRGF0ZSI6IjIwMjEtMDItMjNUMDY6MjQ6NDQuOTAzWiIsImRlbW9Nb2RlIjpmYWxzZSwiYWlkIjoiOWVlNWM1NDMtOGI5YS00OWE1LWIzYzgtYWZjMjc1Njg4ZmMyIiwic2l0ZU93bmVySWQiOiI3ZTY0NThjMC1kNTEyLTRmMGMtYjRhMi1kNzc4YzhlNDVlN2IifQ&debugInfo=OnPublished',
+							data: JSON.stringify(profile),
+							dataType: 'json',
+							contentType: 'application/json; charset=UTF-8',
+							complete: function () {
+								if (profile.storeUrl) {
+									storeUrlOnServer = profile.storeUrl;
+								}
+								draftSettingsSameAsPublished = profile.publishedSettings !== undefined;
+
+								if (profile.draftSettings) {
+									draftSettingsOnServer = profile.draftSettings;
+								}
+							}
+						});
+					});
+				}
+
+				var saveProfileTimer;
+				function saveProfile(profile, debugInfo) {
+					if (saveProfileTimer !== undefined) {
+						clearTimeout(saveProfileTimer);
+					}
+					saveProfileTimer = setTimeout(function () {
+						saveProfileTimer = undefined;
+						if (profile.publishedSettings && !draftSettingsSameAsPublished
+								|| profile.draftSettings && JSON.stringify(profile.draftSettings) !== JSON.stringify(draftSettingsOnServer)
+								|| profile.storeUrl && storeUrlOnServer !== profile.storeUrl) {
+
+							var putProfileUrl = '/wix/app/profile?instance=NCqyZqq6bC7M-9B5OwynL1fCQjIf1mjwQWEldMwlTtA.eyJpbnN0YW5jZUlkIjoiMGQyMWQwNTgtYzZiZS00NmE5LThlOTctMTIxOTA0MzJhODJkIiwiYXBwRGVmSWQiOiIxMmYxZmJhYi04YjlkLTMwMDItODdiNS0yOTcyODk3ZTgzMTQiLCJzaWduRGF0ZSI6IjIwMjEtMDItMjNUMDY6MjQ6NDQuOTAzWiIsImRlbW9Nb2RlIjpmYWxzZSwiYWlkIjoiOWVlNWM1NDMtOGI5YS00OWE1LWIzYzgtYWZjMjc1Njg4ZmMyIiwic2l0ZU93bmVySWQiOiI3ZTY0NThjMC1kNTEyLTRmMGMtYjRhMi1kNzc4YzhlNDVlN2IifQ';
+							if (debugInfo) {
+								putProfileUrl += '&debugInfo=' + encodeURIComponent(debugInfo);
+							}
+
+							$.ajax({
+								type: 'PUT',
+								url: putProfileUrl,
+								data: JSON.stringify(profile),
+								dataType: 'json',
+								contentType: 'application/json; charset=UTF-8',
+								complete: function () {
+									if (profile.storeUrl) {
+										storeUrlOnServer = profile.storeUrl;
+									}
+									draftSettingsSameAsPublished = profile.publishedSettings !== undefined;
+
+									if (profile.draftSettings) {
+										draftSettingsOnServer = profile.draftSettings;
+									}
+								}
+							});
+						}
+					}, 1000);
+				}
+
+                function shouldSkipStateChangedEvent(state) {
+                    var diff = Date.now() - timeOfLastPageChanged;
+                    return (state == '' && diff < 2000);
+                }
+
+				Wix.addEventListener(Wix.Events.STATE_CHANGED, function(data) {
+					if (!!data && data.newState != null && !shouldSkipStateChangedEvent(data.newState) && Wix.Utils.getViewMode() !== 'editor') {
+                        EcwidLog("State Changed", data);
+						var state = data.newState;
+						if (state.match(/hex:([0-9a-f][0-9a-f])*/)) {
+							state = fromHex(state.substring("hex:".length));
+							EcwidLog("State changed from hex: [" + data.newState + "] to [" + state + "]");
+						}
+						defferChangeState(state);
+					}
+				});
+
+				Wix.addEventListener(Wix.Events.SCROLL, function(data) {
+					window.ec = window.ec || {};
+					window.ec.wix = window.ec.wix || {};
+					window.ec.wix.scroll = data;
+					EcwidLog("Wix Scroll Event", data);
+					initDefaultNoticeTop();
+					updateNoticeTop(data);
+				});
+
+				(function() {
+					var requestAnimationFrame = window.requestAnimationFrame
+							|| window.mozRequestAnimationFrame
+							|| window.webkitRequestAnimationFrame
+							|| window.msRequestAnimationFrame;
+					window.requestAnimationFrame = requestAnimationFrame;
+				})();
+
+				var requestId = null;
+				function animate(draw, duration) {
+					var start = performance.now();
+
+					requestId = requestAnimationFrame(function animate(time) {
+						var timePassed = time - start;
+						if (timePassed > duration) {
+                            timePassed = duration;
+						}
+
+						draw(timePassed);
+
+						if (timePassed < duration) {
+							requestAnimationFrame(animate);
+						}
+					});
+				}
+
+				var defaultNoticeTop = null;
+				var storeTop = null;
+				function initDefaultNoticeTop() {
+					if (defaultNoticeTop == null) {
+						defaultNoticeTop = getCurrentNoticeTop();
+					}
+					if (storeTop == null) {
+						getWixTop(function(top) {
+							storeTop = top;
+						});
+					}
+				}
+
+				function updateNoticeTop(scrollData) {
+					var safeStoreTop = storeTop ? storeTop : 0;
+					var scrollOffset = scrollData.scrollTop > safeStoreTop ? scrollData.scrollTop - safeStoreTop : 0;
+					var noticeTop = defaultNoticeTop + scrollOffset;
+					setNoticeTop(noticeTop > 0 ? noticeTop : 0);
+				}
+
+				function setNoticeTop(top) {
+					if (!!requestId) {
+						cancelAnimationFrame(requestId);
+					}
+
+					var currentTop = getCurrentNoticeTop();
+					var incrementTop = top - currentTop;
+					var timeout = 250;
+
+					animate(function(timePassed) {
+						var elements = getNoticeTopElements();
+						for (var i = 0; i < elements.length; i++) {
+							elements[i].style.top = currentTop + Math.round(incrementTop * timePassed / timeout) + "px";
+						}
+					}, timeout);
+				}
+
+				function getCurrentNoticeTop() {
+					var elements = getNoticeTopElements();
+					for (var i = 0; i < elements.length; i++) {
+						var noticeTop = elements[i].getBoundingClientRect().top;
+						if (noticeTop > 0) {
+							return noticeTop;
+						}
+					}
+					return 0;
+				}
+
+				function getNoticeTopElements() {
+					return document.getElementsByClassName("ec-notices--top");
+				}
+
+				Wix.addEventListener(Wix.Events.SITE_PUBLISHED, function() {
+					ensureCurrentPageId(function () {
+						Wix.Features.isSupported(Wix.Features.Types.ADD_COMPONENT , function(supported) {
+							if (supported) {
+								Wix.getStateUrl(currentStorePageId, '', function (data) {
+									publishSite(data.url);
+								});
+							} else {
+								Wix.Utils.getSectionUrl({sectionId: currentStorePageId}, function (data) {
+									publishSite(data.url);
+								});
+							}
+						});
+					});
+				});
+
+				function publishSite(pageUrl) {
+					setCookie("wixStoreUrl", pageUrl, 7);
+					publishDraft(pageUrl);
+					warmUpSiteStatic(pageUrl);
+				}
+
+				function warmUpSiteStatic(storeUrl) {
+					try {
+						var iframe = document.createElement("iframe");
+						iframe.style.display = "none";
+						iframe.src = storeUrl;
+						document.body.appendChild(iframe);
+
+						iframe.onload = function () {
+							iframe.parentNode.removeChild(iframe);
+						};
+					} catch (e) {
+						console.log("Could not warm up static ", e);
+					}
+				}
+
+				Wix.addEventListener(Wix.Events.SITE_SAVED, function() {
+					saveDraftSettings();
+				});
+			});
+
+			function buildProfile(params) {
+				if (!params) {
+					return;
+				}
+				params.colors = params.colors || {};
+				params.colors.bgColor = params.colors.bgColor || { value: null };
+				params.colors.foregroundColor = params.colors.foregroundColor || { value: null };
+				params.colors.linkColor = params.colors.linkColor || { value: null };
+				params.colors.buttonColor = params.colors.buttonColor || { value: null };
+				params.colors.priceColor = params.colors.priceColor || { value: null };
+
+				params.booleans = params.booleans || {};
+				params.numbers = params.numbers || {};
+				params.fonts = params.fonts || {};
+				params.fonts.fontFamily = params.fonts.fontFamily || { family: null, value: null };
+				var settings = {};
+				var consts = getConsts();
+				settings.color = params.colors.bgColor.value;
+				settings.colorForeground = params.colors.foregroundColor.value;
+				settings.colorLink = params.colors.linkColor.value;
+				settings.colorButton = params.colors.buttonColor.value;
+				settings.colorPrice = params.colors.priceColor.value;
+				settings.transparent = false;
+				settings.fontFamily = calculateFontFamily(params.fonts.fontFamily.value, params.fonts.fontFamily.family);
+				settings.gridViewRows = params.numbers.gridRowsCount;
+				settings.gridViewCols = params.numbers.gridColumnsCount;
+				settings.tableViewRows = params.numbers.tableRowsCount;
+				settings.listViewRows = params.numbers.listRowsCount;
+				settings.categoriesPerRow = params.numbers.columnSlider;
+				settings.category = params.numbers.categoryDropDown;
+				settings.defaultView = consts.viewValues[params.numbers.thumbnails];
+				settings.imageSize = consts.sizeValues[params.numbers.imageSize];
+				settings.imageAspectRatio = consts.aspectRatioValues[params.numbers.imageAspectRatio];
+				settings.imageHasShadow = params.booleans.imageHasShadowParam;
+
+				<!-- если выбрали опцию image size под которую нет константы размера, то картинки отключили -->
+				<!-- если выбрали опцию image size и константа есть то включили -->
+				if (params.numbers.imageSize !== "undefined" && settings.imageSize) {
+					settings.productListShowProductImages = true;
+				} else if (params.numbers.imageSize !== "undefined") {
+					settings.productListShowProductImages = false;
+				}
+
+				settings.productListProductInfoLayout = consts.listLayoutValues[params.numbers.productCardLayout];
+				settings.productListShowFrame = params.booleans.productCardFrameParam;
+				settings.productListTitleBehavior = consts.showValues[params.numbers.productCardTitle];
+				settings.productListPriceBehavior = consts.showValues[params.numbers.productCardPrice];
+				settings.productListSkuBehavior = consts.showValues[params.numbers.productCardSku];
+				settings.productListBuyButtonBehavior = consts.showValues[params.numbers.productCardBuyButton];
+				settings.productListShowAdditionalImageOnHover = consts.booleanValues[params.numbers.productCardAdditionalImage];
+				settings.productListCategoryTitleBehavior = consts.positionValues[params.numbers.categoryNamePosition];
+				settings.productDetailsLayout = consts.detailsLayoutValues[params.numbers.productDetailsLayout];
+				settings.productDetailsGalleryLayout = consts.galleryLayoutValues[params.numbers.productDetailsGalleryLayout];
+				settings.productDetailsShowProductName = params.booleans.productDetailsShowProductNameParam;
+				settings.productDetailsShowBreadcrumbs = params.booleans.productDetailsShowBreadcrumbsParam;
+				settings.productDetailsShowProductSku = params.booleans.productDetailsShowProductSkuParam;
+				settings.productDetailsShowProductPrice = params.booleans.productDetailsShowProductPriceParam;
+				settings.productDetailsShowProductOptions = params.booleans.productDetailsShowProductOptionsParam;
+				settings.productDetailsShowQty = params.booleans.productDetailsShowQtyParam;
+				settings.productDetailsShowNumberOfItemsInStock = params.booleans.productDetailsShowNumberOfItemsInStockParam;
+				settings.productDetailsShowInStockLabel = params.booleans.productDetailsShowInStockLabelParam;
+				settings.productDetailsShowWholesalePrices = params.booleans.productDetailsShowWholesalePricesParam;
+				settings.productDetailsShowAttributes = params.booleans.productDetailsShowAttributesParam;
+				settings.productDetailsShowWeight = params.booleans.productDetailsShowWeightParam;
+				settings.productDetailsShowProductDescription = params.booleans.productDetailsShowProductDescriptionParam;
+				settings.productDetailsShowShareButtons = params.booleans.productDetailsShowShareButtonsParam;
+ 				settings.enableCatalogOnOnePage = params.booleans.enableCatalogOnOnePage;
+				settings.productFiltersOpenedByDefaultOnCategoryPage = params.booleans.productFiltersOpenedByDefaultOnCategoryPage;
+ 				settings.productDetailsShowSubtitle = params.booleans.productDetailsShowSubtitleParam;
+ 				settings.productListSubtitlesBehavior = consts.showValues[params.numbers.productCardSubtitle];
+
+                return {
+                    draftSettings: settings
+                };
+            }
+
+			// calculate font family from wix component raw font style format
+			function calculateFontFamily(fontValue, fallback) {
+				if (!fontValue) {
+					return fallback;
+				}
+
+				// must start with 'font:' prefix
+				if (fontValue.indexOf('font:') !== 0) {
+					return fallback;
+				}
+
+				try {
+					fontValue = fontValue.slice(5, fontValue.length - 1); // remove font: prefix and last char ';'
+
+					var styledSpan = document.createElement('span');
+					styledSpan.style.font = fontValue;
+
+					var extractedFontFamily = styledSpan.style.fontFamily;
+					if (!extractedFontFamily) {
+						return fallback;
+					}
+
+					return extractedFontFamily;
+				} catch (e) {
+					return fallback;
+				}
+			}
+
+			function updateChameleonConfig(data) {
+				data.colors = data.colors || {};
+
+				window.ec = window.ec || {};
+				window.ec.config = window.ec.config || {};
+				window.ec.config.chameleon = window.ec.config.chameleon || {};
+				window.ec.config.chameleon.colors = window.ec.config.chameleon.colors || {};
+
+				function updateColor(chameleonName, color, opacity) {
+					if (color && color.value) {
+						if (typeof opacity !== 'undefined' && opacity != null) {
+							window.ec.config.chameleon.colors[chameleonName] = updateOpacity(color.value, opacity);
+						} else {
+							window.ec.config.chameleon.colors[chameleonName] = color.value;
+						}
+					}
+				}
+
+				updateColor('color-foreground', data.colors.foregroundColor);
+				updateColor('color-link', data.colors.linkColor);
+				updateColor('color-button', data.colors.buttonColor);
+				updateColor('color-price', data.colors.priceColor);
+				updateColor('color-background', data.colors.bgColor, 0);
+
+				if (data.fonts && data.fonts.fontFamily && data.fonts.fontFamily.family) {
+					var calulatedFontFamily = calculateFontFamily(data.fonts.fontFamily.value, data.fonts.fontFamily.family);
+					window.ec.config.chameleon.font = window.ec.config.chameleon.font || {};
+					window.ec.config.chameleon.font['font-family'] = calulatedFontFamily;
+				}
+			}
+
+			function updateLookAndFeelConfig(data) {
+				var consts = getConsts();
+
+				function updateSetting(name, value) {
+					if (typeof value !== 'undefined' && value != null) {
+						window.ec.storefront[name] = value;
+					}
+				}
+
+				window.ec = window.ec || {};
+				window.ec.storefront = window.ec.storefront || {};
+
+				data.numbers = data.numbers || {};
+				var settings = {};
+
+				var imageSizeSelection = consts.sizeValues[data.numbers.imageSize];
+				if (imageSizeSelection) {
+					settings.product_list_image_size = imageSizeSelection;
+					settings.product_list_show_product_images = true;
+				} else if (data.numbers.imageSize) {
+					settings.product_list_show_product_images = false;
+				}
+
+				settings.product_list_image_aspect_ratio = consts.aspectRatioValues[data.numbers.imageAspectRatio];
+				settings.product_list_image_has_shadow = data.booleans.imageHasShadowParam;
+				settings.product_list_product_info_layout = consts.listLayoutValues[data.numbers.productCardLayout];
+				settings.product_list_show_frame = data.booleans.productCardFrameParam;
+				settings.product_list_title_behavior = consts.showValues[data.numbers.productCardTitle];
+				settings.product_list_price_behavior = consts.showValues[data.numbers.productCardPrice];
+				settings.product_list_sku_behavior = consts.showValues[data.numbers.productCardSku];
+				settings.product_list_subtitles_behavior = consts.showValues[data.numbers.productCardSubtitle];
+				settings.product_list_buybutton_behavior = consts.showValues[data.numbers.productCardBuyButton];
+				settings.product_list_show_additional_image_on_hover = consts.booleanValues[data.numbers.productCardAdditionalImage];
+				settings.product_list_category_title_behavior = consts.positionValues[data.numbers.categoryNamePosition];
+				settings.product_details_layout = consts.detailsLayoutValues[data.numbers.productDetailsLayout];
+				if (typeof settings.product_details_layout !== 'undefined' && settings.product_details_layout != null && settings.product_details_layout.indexOf('_BELOW_IMAGE') !== -1) {
+					settings.product_details_layout = settings.product_details_layout.substring(0, settings.product_details_layout.lastIndexOf('_BELOW_IMAGE'));
+					settings.product_details_two_columns_with_right_sidebar_show_product_description_on_sidebar = false;
+				} else {
+					settings.product_details_two_columns_with_right_sidebar_show_product_description_on_sidebar = true;
+				}
+				settings.product_details_gallery_layout = consts.galleryLayoutValues[data.numbers.productDetailsGalleryLayout];
+				settings.product_details_show_product_name = data.booleans.productDetailsShowProductNameParam;
+				settings.product_details_show_breadcrumbs = data.booleans.productDetailsShowBreadcrumbsParam;
+				settings.product_details_show_product_sku = data.booleans.productDetailsShowProductSkuParam;
+				settings.product_details_show_subtitle = data.booleans.productDetailsShowSubtitleParam;
+				settings.product_details_show_product_price = data.booleans.productDetailsShowProductPriceParam;
+				settings.product_details_show_product_options = data.booleans.productDetailsShowProductOptionsParam;
+				settings.product_details_show_qty = data.booleans.productDetailsShowQtyParam;
+				settings.product_details_show_number_of_items_in_stock = data.booleans.productDetailsShowNumberOfItemsInStockParam;
+				settings.product_details_show_in_stock_label = data.booleans.productDetailsShowInStockLabelParam;
+				settings.product_details_show_wholesale_prices = data.booleans.productDetailsShowWholesalePricesParam;
+				settings.product_details_show_attributes = data.booleans.productDetailsShowAttributesParam;
+				settings.product_details_show_weight = data.booleans.productDetailsShowWeightParam;
+				settings.product_details_show_product_description = data.booleans.productDetailsShowProductDescriptionParam;
+				settings.product_details_show_share_buttons = data.booleans.productDetailsShowShareButtonsParam;
+				settings.enable_catalog_on_one_page = data.booleans.enableCatalogOnOnePage;
+				settings.product_filters_opened_by_default_on_category_page = data.booleans.productFiltersOpenedByDefaultOnCategoryPage;
+
+				updateSetting('product_list_image_size', settings.product_list_image_size);
+				updateSetting('product_list_category_image_size', settings.product_list_image_size);
+				updateSetting('product_list_image_aspect_ratio', settings.product_list_image_aspect_ratio);
+				updateSetting('product_list_category_image_aspect_ratio', settings.product_list_image_aspect_ratio);
+				updateSetting('product_list_image_has_shadow', settings.product_list_image_has_shadow);
+ 				updateSetting('product_list_show_product_images', settings.product_list_show_product_images);
+				updateSetting('product_list_product_info_layout', settings.product_list_product_info_layout);
+				updateSetting('product_list_show_frame', settings.product_list_show_frame);
+				updateSetting('product_list_title_behavior', settings.product_list_title_behavior);
+				updateSetting('product_list_price_behavior', settings.product_list_price_behavior);
+				updateSetting('product_list_sku_behavior', settings.product_list_sku_behavior);
+				updateSetting('product_list_buybutton_behavior', settings.product_list_buybutton_behavior);
+				updateSetting('product_list_show_additional_image_on_hover', settings.product_list_show_additional_image_on_hover);
+				updateSetting('product_list_category_title_behavior', settings.product_list_category_title_behavior);
+				updateSetting('product_details_layout', settings.product_details_layout);
+				updateSetting('product_details_two_columns_with_right_sidebar_show_product_description_on_sidebar', settings.product_details_two_columns_with_right_sidebar_show_product_description_on_sidebar);
+				updateSetting('product_details_gallery_layout', settings.product_details_gallery_layout);
+				updateSetting('product_details_show_product_name', settings.product_details_show_product_name);
+				updateSetting('product_details_show_breadcrumbs', settings.product_details_show_breadcrumbs);
+				updateSetting('product_details_show_product_sku', settings.product_details_show_product_sku);
+				updateSetting('product_details_show_product_price', settings.product_details_show_product_price);
+				updateSetting('product_details_show_sale_price', settings.product_details_show_product_price);
+				updateSetting('product_details_show_price_per_unit', settings.product_details_show_product_price);
+				updateSetting('product_details_show_tax', settings.product_details_show_product_price);
+				updateSetting('product_details_show_product_options', settings.product_details_show_product_options);
+				updateSetting('product_details_show_qty', settings.product_details_show_qty);
+				updateSetting('product_details_show_number_of_items_in_stock', settings.product_details_show_number_of_items_in_stock);
+				updateSetting('product_details_show_in_stock_label', settings.product_details_show_in_stock_label);
+				updateSetting('product_details_show_wholesale_prices', settings.product_details_show_wholesale_prices);
+				updateSetting('product_details_show_attributes', settings.product_details_show_attributes);
+				updateSetting('product_details_show_weight', settings.product_details_show_weight);
+				updateSetting('product_details_show_product_description', settings.product_details_show_product_description);
+				updateSetting('product_details_show_share_buttons', settings.product_details_show_share_buttons);
+				updateSetting('enable_catalog_on_one_page', settings.enable_catalog_on_one_page);
+				updateSetting('product_list_subtitles_behavior', settings.product_list_subtitles_behavior);
+				updateSetting('product_details_show_subtitle', settings.product_details_show_subtitle);
+				updateSetting('product_filters_opened_by_default_on_category_page', settings.product_filters_opened_by_default_on_category_page);
+			}
+		})()
+	</script>
+<script type="text/javascript" src="./new-frontend.en.697608226.js.download"></script><script type="text/javascript" async="" src="./ecwid-storefront.a11e7b7cc587b5de6adcebbfffc35a72.min.js.download"></script><style wix-style="">.Title{ font:normal normal normal 110px/1.4em playfair display,serif; } .Menu{ font:normal normal normal 14px/1.43em helvetica-w01-roman,helvetica-w02-roman,helvetica-lt-w10-roman,sans-serif; } .Page-title{ font:normal normal normal 40px/1.4em playfair display,serif; } .Heading-XL{ font:normal normal normal 88px/1.4em playfair display,serif; } .Heading-L{ font:normal normal normal 72px/1.4em playfair display,serif; } .Heading-M{ font:italic normal normal 32px/1.4em playfair display,serif; } .Heading-S{ font:normal normal normal 24px/1.4em avenir-lt-w01_35-light1475496,sans-serif; } .Body-L{ font:normal normal normal 20px/1.4em avenir-lt-w01_35-light1475496,sans-serif; } .Body-M{ font:normal normal normal 15px/1.4em avenir-lt-w01_35-light1475496,sans-serif; } .Body-S{ font:normal normal normal 14px/1.4em avenir-lt-w01_35-light1475496,sans-serif; } .Body-XS{ font:normal normal normal 14px/1.43em brandon-grot-w01-light,sans-serif; } }</style><link type="text/css" rel="stylesheet" href="./css" id="wix-google-fonts"><link type="text/css" rel="stylesheet" href="./languages(1).css"><style>:focus {
+    outline: none;
+}
+
+.js-focus-visible .focus-visible:focus,
+.js-focus-visible .focus-visible:focus ~ .wixSdkShowFocusOnSibling
+{
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 1px 2px #3899EC;
+}
+</style><script src="./focus-visible.min.js.download" id="dynamic_script_FOCUS_VISIBLE"></script><link rel="stylesheet" href="./new(2)"><script type="text/javascript" async="" src="./ecwid-checkout.859313ca69846f2ac67cfdb4f581dc64.min.js.download"></script><meta name="description"><meta name="robots" content=""></head>
+
+<body style="background:rgba(255,255,255,1)" id="ecwid_body" data-new-gr-c-s-check-loaded="14.996.0" data-gr-ext-installed="" class="ecwid-customer-loggedOut js-focus-visible ecwid-lang-en ec-frame">
+	<a class="gwt-Anchor" name="anchor637" id="ecwid_top_scroller" style="width: 0px; height: 0px; position: absolute; display: block;"></a><div id="ecwid-iframe-rollover-container">
+		<div id="main" style="display: nonedisplay: block !important; height: 0 !important; max-height: 0 !important; min-height: 0 !important; overflow-y: auto !important;">
+
+<script type="text/javascript">
+
+			window.ec = window.ec || {};
+		window.ec.config = window.ec.config || {};
+		window.ec.storefront = window.ec.storefront || {};
+		window.ec.config.chameleon = window.ec.config.chameleon || {};
+		window.ec.config.chameleon.colors = window.ec.config.chameleon.colors || {};
+		var colors = window.ec.config.chameleon.colors;
+
+		colors['color-foreground'] = 'rgba(51,51,51,1)';
+		colors['color-link'] = 'rgba(30,126,200,1)';
+		colors['color-button'] = 'rgba(67,156,160,1)';
+		colors['color-price'] = 'rgba(162,5,5,1)';
+		colors['color-background'] = updateOpacity('rgba(255,255,255,1)', 0);
+		var fontFamily = 'avenir-lt-w01_35-light1475496, sans-serif';
+		if (!!fontFamily) {
+			var font = window.ec.config.chameleon.font || {};
+			font['font-family'] = fontFamily;
+			window.ec.config.chameleon.font = font;
+		}
+
+	window.ec.storefront.product_list_image_size = 'SMALL';
+	window.ec.storefront.product_list_category_image_size = 'SMALL';
+	window.ec.storefront.product_list_image_aspect_ratio = 'SQUARE_1';
+	window.ec.storefront.product_list_category_image_aspect_ratio = 'SQUARE_1';
+	window.ec.storefront.product_list_image_has_shadow = true;
+	window.ec.storefront.product_list_show_product_images = true;
+	window.ec.storefront.product_list_product_info_layout = 'CENTER';
+	window.ec.storefront.product_list_show_frame = true;
+	window.ec.storefront.product_list_title_behavior = 'SHOW';
+	window.ec.storefront.product_list_price_behavior = 'SHOW';
+	window.ec.storefront.product_list_sku_behavior = 'HIDE';
+	window.ec.storefront.product_list_buybutton_behavior = 'HIDE';
+	window.ec.storefront.product_list_show_additional_image_on_hover = false;
+	window.ec.storefront.product_list_category_title_behavior = 'SHOW_ON_IMAGE';
+	window.ec.storefront.product_details_layout = 'TWO_COLUMNS_SIDEBAR_ON_THE_RIGHT';
+	if (typeof window.ec.storefront.product_details_layout !== 'undefined' && window.ec.storefront.product_details_layout != null && window.ec.storefront.product_details_layout.indexOf('_BELOW_IMAGE') !== -1) {
+		window.ec.storefront.product_details_two_columns_with_right_sidebar_show_product_description_on_sidebar = false;
+		window.ec.storefront.product_details_layout = window.ec.storefront.product_details_layout.substring(0, window.ec.storefront.product_details_layout.lastIndexOf('_BELOW_IMAGE'));
+	}
+	window.ec.storefront.product_details_gallery_layout = 'IMAGE_SINGLE_THUMBNAILS_HORIZONTAL';
+	window.ec.storefront.product_details_show_product_name = true;
+	window.ec.storefront.product_details_show_breadcrumbs = true;
+	window.ec.storefront.product_details_show_product_sku = false;
+	window.ec.storefront.product_details_show_product_price = true;
+	window.ec.storefront.product_details_show_sale_price = true;
+	window.ec.storefront.product_details_show_price_per_unit = true;
+	window.ec.storefront.product_details_show_tax = true;
+	window.ec.storefront.product_details_show_product_options = true;
+	window.ec.storefront.product_details_show_qty = false;
+	window.ec.storefront.product_details_show_number_of_items_in_stock = false;
+	window.ec.storefront.product_details_show_in_stock_label = false;
+	window.ec.storefront.product_details_show_wholesale_prices = false;
+	window.ec.storefront.product_details_show_attributes = false;
+	window.ec.storefront.product_details_show_weight = false;
+	window.ec.storefront.product_details_show_product_description = true;
+	window.ec.storefront.product_details_show_share_buttons = false;
+	window.ec.storefront.enable_catalog_on_one_page = false;
+	window.ec.storefront.product_details_show_subtitle = true;
+	window.ec.storefront.product_list_subtitles_behavior = 'SHOW';
+	window.ec.storefront.product_filters_opened_by_default_on_category_page = false;
+
+</script>
+
+		<script type="text/javascript">
+			window.ec = window.ec || {};
+			window.ec.config = window.ec.config || {};
+			window.ec.config.useExternalState = true;
+			window.ec.config.interactive = true;
+			window.ec.config.storefrontUrls = window.ec.config.storefrontUrls || {};
+			window.ec.config.storefrontUrls.cleanUrls = true;
+			window.ec.config.baseUrl = '/wix/app/store';
+			window.ec.storefront = window.ec.storefront || {};
+			window.ec.storefront.sharing_button_link = "DIRECT_PAGE_URL";
+
+			var scrollerInstaller = function() {
+				window.ec.config.navigation_scrolling = 'custom';
+				window.ec.config.custom_scroller = function () {
+					Wix.getBoundingRectAndOffsets(function (data) {
+						var scrollIndent = window.ec.config.scroll_indent; 
+						if (typeof scrollIndent === "undefined") {
+							scrollIndent = 100;
+						}
+						var topThreshold = window.outerHeight * 0.27;
+						var rectTopWithIndent = data.rect.top - scrollIndent;
+						if (rectTopWithIndent < 0 || rectTopWithIndent > topThreshold) {
+							var top = 0;
+							if (data.offsets.y > topThreshold) {
+								top = data.offsets.y - scrollIndent;
+							}
+							console && console.log("Need to scroll: " + needToScroll);
+							if (!!needToScroll) {
+								Wix.scrollTo(0, top);
+								needToScroll = false;
+							}
+						} else {
+							console && console.log("Skipping scroll");
+							needToScroll = false;
+						}
+					});
+				};
+			};
+			scrollerInstaller();
+
+			function changeEcwidState(state) {
+				window.ec.config.custom_scroller();
+				if (window.ec.setInternalState) {
+					console && console.log("window.ec.setInternalState("+state+")");
+					window.ec.setInternalState(state);
+				} else {
+					console && console.log("window.ec.config.ecwidInitialState = "+state);
+					window.ec.config.ecwidInitialState = state;
+				}
+			}
+			window.ec.config.customWidgetClickHandler = function(clickedHash) {
+				console && console.log("customWidgetClickHandler(" + clickedHash + ")");
+				if (clickedHash &&  clickedHash.length && clickedHash[0] === '#') {
+					var state = clickedHash.replace('#', '')
+				} else {
+					var state = '';
+				}
+				changeEcwidState(state);
+			};
+
+			window.ec.config.customUpdatePageMetadata = function(pageMetaData) {
+				if (Wix.Utils.getViewMode() !== 'site') {
+					return;
+				}
+
+				if (pageMetaData.description === "") {
+					pageMetaData.description = " ";
+				}
+
+				console.log("Updating page metadata using Wix SDK." +
+						"Title: " + pageMetaData.title + ",description: " + pageMetaData.description);
+
+				Wix.setPageMetadata({
+					title: pageMetaData.title,
+					description: pageMetaData.description
+				});
+			};
+
+			appState = "";
+			changeEcwidState(appState);
+
+			window.ec = window.ec || {};
+			window.ec.storefront = window.ec.storefront || {};
+			window.ec.storefront.staticPages = window.ec.storefront.staticPages || {};
+			ec.storefront.staticPages.switchToDynamicCallback = function () {
+				scrollerInstaller();
+			}
+
+			function getEcwidConsentByWixConsentPolicy(policyDetails) {
+				var allConsentsAcceptedByDefault = policyDetails.defaultPolicy === true
+						&& policyDetails.policy.functional === true
+						&& policyDetails.policy.analytics === true
+						&& policyDetails.policy.advertising === true
+						&& policyDetails.policy.dataToThirdParty === true
+						&& policyDetails.policy.essential === true;
+				var allConsentsAcceptedManually = policyDetails.defaultPolicy === false
+						&& policyDetails.policy.functional === true
+						&& policyDetails.policy.analytics === true
+						&& policyDetails.policy.advertising === true
+						&& policyDetails.policy.dataToThirdParty === true
+						&& policyDetails.policy.essential === true;
+				if (allConsentsAcceptedByDefault) {
+					console.log("All wix consents accepted by default - follow consent policies as per own ecwid setting");
+					return null;
+				} else if (allConsentsAcceptedManually) {
+					console.log("All wix consents accepted manually by user - override ecwid consent as accepted");
+					return true;
+				} else {
+					console.log("Wix consents are not chosen or some of wix consents declined manually by user - override ecwid consent as declined",
+							policyDetails);
+					return false;
+				}
+			}
+
+			function setEcwidTrackingConsent(isAccepted) {
+				ec.config = ec.config || {};
+				ec.config.tracking = ec.config.tracking || {};
+				ec.config.tracking['ask_consent'] = true;
+				ec.config.tracking['user_response'] = isAccepted ? "ACCEPTED" : "DECLINED";
+			}
+
+			function getWixConsentPolicy() {
+				return Wix.Utils.getCurrentConsentPolicy();
+			}
+
+			if (!isInsideWixEditor()) {
+				var wixConsentPolicy = getWixConsentPolicy();
+				var ecwidConsent = getEcwidConsentByWixConsentPolicy(wixConsentPolicy);
+				if (ecwidConsent != null) {
+					setEcwidTrackingConsent(ecwidConsent);
+				}
+			}
+		</script>
+			<script type="text/javascript">
+				window.ec = window.ec || {};
+				window.ec.config = window.ec.config || {};
+				window.ec.config.google_analytics = window.ec.config.google_analytics || {};
+				window.ec.config.google_analytics.track_pageviews = false;
+			</script>
+			<script type="text/javascript" src="./script.js.download" charset="utf-8"></script>
+			<script type="text/javascript">
+				if (isInsideWixEditor()) {
+					xProductBrowser("categoriesPerRow=3",  "categoryView=grid", "views=grid(20,3) list(60) table(60)", "defaultCategoryId=");
+				} else {
+					xProductBrowser("categoriesPerRow=3",  "categoryView=grid", "views=grid(20,3) list(60) table(60)", "defaultCategoryId=");
+				}
+			</script><div id="ProductBrowser-1" class="ecwid" style="min-height: 400px;"><div><style>/* PB placeholder */.ecwid-pb-placeholder {box-sizing: border-box;opacity: 0;min-height: 400px;padding-top: 1px;}.ecwid-pb-placeholder > div {box-sizing: border-box;}.ecwid-pb-placeholder--light,.ecwid-pb-placeholder--dark {opacity: 1;}.ecwid-pb-placeholder__grid {overflow: hidden;width: 100%;max-width: 786px;height: 280px;margin: 35px auto 50px;text-align: center;transition: opacity .15s ease-in-out;}.ecwid-pb-placeholder__wrap {margin-right: -30px;margin-left: -30px;}.ecwid-pb-placeholder__grid-cell {display: inline-block;width: 282px;height: 280px;line-height: 280px;white-space: nowrap;}.ecwid-pb-placeholder__product {width: 222px;height: 222px;margin: 0 auto;padding: 0;}.ecwid-pb-placeholder__title {max-width: 222px;margin: 12px auto;padding: 0;}.ecwid-pb-placeholder__title > div {height: 7px;margin: 12px auto;padding: 0;}.ecwid-pb-placeholder__title > div:nth-child(3) {max-width: 100px;}/* PB placeholder light */.ecwid-pb-placeholder--light .ecwid-pb-placeholder__grid-cell .ecwid-pb-placeholder__product,.ecwid-pb-placeholder--light .ecwid-pb-placeholder__grid-cell .ecwid-pb-placeholder__title > div {background-color: rgba(0, 0, 0, .03);}.ecwid-pb-placeholder--light.ecwid-pb-placeholder--animate .ecwid-pb-placeholder__grid-cell:nth-child(1) .ecwid-pb-placeholder__product {animation: pb-flash-light 800ms ease-in-out 0ms infinite;}.ecwid-pb-placeholder--light.ecwid-pb-placeholder--animate .ecwid-pb-placeholder__grid-cell:nth-child(1) .ecwid-pb-placeholder__title > div {animation: pb-flash-light 800ms ease-in-out 83ms infinite;}.ecwid-pb-placeholder--light.ecwid-pb-placeholder--animate .ecwid-pb-placeholder__grid-cell:nth-child(2) .ecwid-pb-placeholder__product {animation: pb-flash-light 800ms ease-in-out 167ms infinite;}.ecwid-pb-placeholder--light.ecwid-pb-placeholder--animate .ecwid-pb-placeholder__grid-cell:nth-child(2) .ecwid-pb-placeholder__title > div {animation: pb-flash-light 800ms ease-in-out 250ms infinite;}.ecwid-pb-placeholder--light.ecwid-pb-placeholder--animate .ecwid-pb-placeholder__grid-cell:nth-child(3) .ecwid-pb-placeholder__product {animation: pb-flash-light 800ms ease-in-out 333ms infinite;}.ecwid-pb-placeholder--light.ecwid-pb-placeholder--animate .ecwid-pb-placeholder__grid-cell:nth-child(3) .ecwid-pb-placeholder__title > div {animation: pb-flash-light 800ms ease-in-out 416ms infinite;}/* PB placehoder dark */.ecwid-pb-placeholder--dark .ecwid-pb-placeholder__grid-cell .ecwid-pb-placeholder__product,.ecwid-pb-placeholder--dark .ecwid-pb-placeholder__grid-cell .ecwid-pb-placeholder__title > div {background-color: rgba(255, 255, 255, .1);}.ecwid-pb-placeholder--dark.ecwid-pb-placeholder--animate .ecwid-pb-placeholder__grid-cell:nth-child(1) .ecwid-pb-placeholder__product {animation: pb-flash-dark 800ms ease-in-out 0ms infinite;}.ecwid-pb-placeholder--dark.ecwid-pb-placeholder--animate .ecwid-pb-placeholder__grid-cell:nth-child(1) .ecwid-pb-placeholder__title > div {animation: pb-flash-dark 800ms ease-in-out 83ms infinite;}.ecwid-pb-placeholder--dark.ecwid-pb-placeholder--animate .ecwid-pb-placeholder__grid-cell:nth-child(2) .ecwid-pb-placeholder__product {animation: pb-flash-dark 800ms ease-in-out 167ms infinite;}.ecwid-pb-placeholder--dark.ecwid-pb-placeholder--animate .ecwid-pb-placeholder__grid-cell:nth-child(2) .ecwid-pb-placeholder__title > div {animation: pb-flash-dark 800ms ease-in-out 250ms infinite;}.ecwid-pb-placeholder--dark.ecwid-pb-placeholder--animate .ecwid-pb-placeholder__grid-cell:nth-child(3) .ecwid-pb-placeholder__product {animation: pb-flash-dark 800ms ease-in-out 333ms infinite;}.ecwid-pb-placeholder--dark.ecwid-pb-placeholder--animate .ecwid-pb-placeholder__grid-cell:nth-child(3) .ecwid-pb-placeholder__title > div {animation: pb-flash-dark 800ms ease-in-out 416ms infinite;}@keyframes pb-flash-light {0% { background-color: rgba(0, 0, 0, .03); }30% { background-color: rgba(0, 0, 0, .047); }100% { background-color: rgba(0, 0, 0, .03); }}@keyframes pb-flash-dark {0% { background-color: rgba(255, 255, 255, .06); }30% { background-color: rgba(255, 255, 255, .1); }100% { background-color: rgba(255, 255, 255, .06); }}</style></div><div lang="en" class="ec-size ec-size--xxs ec-size--xs ec-size--s ec-size--m ec-size--l ec-size--xl ecwid-no-touch ecwid-supports-cssanimations ecwid-iframe ecwid-responsive ecwid-no-dragndrop"><a class="gwt-Anchor" name="anchor638" style="width: 0px; height: 0px; position: absolute; display: block;"></a><div><div class="ecwid-productBrowser ecwid-productBrowser-CategoryPage ecwid-productBrowser-CategoryPage-0"><div style="width: 100%;"><table cellspacing="0" cellpadding="0" class="ecwid-productBrowser-innerTable" style="width: 100%;"><tbody><tr><td align="left" style="vertical-align: top;"><table class="ecwid-productBrowser-auth-mini ecwid-productBrowser-auth-mini-horizontal" style=""><colgroup><col></colgroup><tbody><tr style="vertical-align: middle;"><td width="100%"><div class="ecwid-productBrowser-auth"><div></div></div></td></tr></tbody></table></td></tr><tr><td align="left" style="vertical-align: top;"><div aria-hidden="true" style="display: none;"><div class="gwt-HTML"></div></div></td></tr><tr><td align="left" style="vertical-align: top;"><div aria-hidden="true" style="display: none;"></div></td></tr></tbody></table></div><div style=""><div><div class="ecwid-productBrowser-head"></div><div><div class="ec-wrapper"><div class="ec-store ec-store__category-page ec-store__category-page--0 ec-store--small-category-images ec-store--small-product-images"><div class="ec-store__content-wrapper ec-store__content-wrapper--wide"><div class="ec-grid"><div class="grid__categories grid__categories--advanced grid__categories--small-items grid__categories--aspect-ratio-1" data-items="2" data-cols="6" style="max-width: 10000px;"><div class="grid-category grid-category--id-72284944 grid-category--no-image grid-category--has-shadow"><div class="grid-category__wrap"><div class="grid-category__wrap-inner"><div class="grid-category__card"><a class="grid-category__image" title="Sundays" href="https://ashifoods.wixsite.com/cali/online-store/Sundays-c72284944" tabindex="-1"><div class="grid-category__bg"><div class="grid-category__bg-color colored-background-4"></div><div class="grid-category__bg-image" style=""></div></div><div class="grid-category__image-wrap"><div class="grid-category__image-spacer"><div class="grid-category__image-spacer-inner"></div></div><div class="grid-category__picture" style=""></div><div class="grid__clearfix"></div></div><div class="grid-category__shadow"><div class="grid-category__shadow-inner">Sundays</div></div></a><div class="grid-category__hover-wrap"></div><a class="grid-category__title" href="https://ashifoods.wixsite.com/cali/online-store/Sundays-c72284944"><div class="grid-category__title-inner">Sundays</div></a></div><div class="grid-category__spacer"><div class="grid-category__spacer-inner"></div></div><div class="grid__clearfix"></div></div></div></div><div class="grid-category grid-category--id-72291488 grid-category--no-image grid-category--has-shadow"><div class="grid-category__wrap"><div class="grid-category__wrap-inner"><div class="grid-category__card"><a class="grid-category__image" title="Everyday" href="https://ashifoods.wixsite.com/cali/online-store/Everyday-c72291488" tabindex="-1"><div class="grid-category__bg"><div class="grid-category__bg-color colored-background-8"></div><div class="grid-category__bg-image" style=""></div></div><div class="grid-category__image-wrap"><div class="grid-category__image-spacer"><div class="grid-category__image-spacer-inner"></div></div><div class="grid-category__picture" style=""></div><div class="grid__clearfix"></div></div><div class="grid-category__shadow"><div class="grid-category__shadow-inner">Everyday</div></div></a><div class="grid-category__hover-wrap"></div><a class="grid-category__title" href="https://ashifoods.wixsite.com/cali/online-store/Everyday-c72291488"><div class="grid-category__title-inner">Everyday</div></a></div><div class="grid-category__spacer"><div class="grid-category__spacer-inner"></div></div><div class="grid__clearfix"></div></div></div></div></div><div id="featured-products-anchor"></div><div class="ec-page-title ec-page-title__featured-products"><h1 class="page-title__name ec-header-h1">Featured Products</h1></div><div class="grid__wrap"><div class="grid__wrap-inner"><div class="grid__products grid__products--classic grid__products--appearance-frame grid__products--layout-center grid__products--small-items grid__products--aspect-ratio-1" data-items="3" data-cols="6" style="max-width: 10000px;"><div class="grid-product grid-product--id-276511024 grid-product--dark grid-product--has-shadow ec-store-productsGrid-cell-zeroPrice"><div class="grid-product__wrap"><div class="grid-product__scroller--id-276511024 grid-product__scroller"></div><div class="grid-product__wrap-inner"><a class="grid-product__image" title="Zinger Burger" href="https://ashifoods.wixsite.com/cali/online-store/Zinger-Burger-p276511024"><div class="grid-product__spacer"><div class="grid-product__spacer-inner"></div></div><div class="grid-product__bg" style="background-color: rgb(198, 131, 119);"></div><div class="grid-product__image-wrap"><img src="./1882363734.jpg" title="Zinger Burger" alt="Zinger Burger" class="grid-product__picture" srcset="https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882363734.jpg 1x, https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882363734.jpg 2x" style="width: 100%; height: 100%;"></div><div class="grid-product__shadow ec-text-muted"><div class="grid-product__shadow-inner">Zinger Burger</div></div><div class="grid__clearfix"></div><div class="grid-product__hover-wrap"></div></a><a class="grid-product__title" href="https://ashifoods.wixsite.com/cali/online-store/Zinger-Burger-p276511024"><div class="grid-product__title-inner">Zinger Burger</div></a><div class="grid-product__price"><div class="grid-product__price-amount"><div class="grid-product__price-value ec-price-item">$0.00</div></div></div></div></div></div><div class="grid-product grid-product--id-276507040 grid-product--dark grid-product--has-shadow"><div class="grid-product__wrap"><div class="grid-product__scroller--id-276507040 grid-product__scroller"></div><div class="grid-product__wrap-inner"><a class="grid-product__image" title="Nihari" href="https://ashifoods.wixsite.com/cali/online-store/Nihari-p276507040"><div class="grid-product__spacer"><div class="grid-product__spacer-inner"></div></div><div class="grid-product__bg" style="background-color: rgb(92, 77, 63);"></div><div class="grid-product__image-wrap"><img src="./1882313613.jpg" title="Nihari" alt="Nihari" class="grid-product__picture" srcset="https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882313613.jpg 1x, https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882313613.jpg 2x" style="width: 100%; height: 100%;"></div><div class="grid-product__shadow ec-text-muted"><div class="grid-product__shadow-inner">Nihari</div></div><div class="grid__clearfix"></div><div class="grid-product__hover-wrap"></div></a><a class="grid-product__title" href="https://ashifoods.wixsite.com/cali/online-store/Nihari-p276507040"><div class="grid-product__title-inner">Nihari</div></a><div class="grid-product__price"><div class="grid-product__price-amount"><div class="grid-product__price-value ec-price-item">$10.00</div></div></div></div></div></div><div class="grid-product grid-product--id-276496429 grid-product--dark grid-product--has-shadow"><div class="grid-product__wrap"><div class="grid-product__scroller--id-276496429 grid-product__scroller"></div><div class="grid-product__wrap-inner"><a class="grid-product__image" title="Chicken Biryani" href="https://ashifoods.wixsite.com/cali/online-store/Chicken-Biryani-p276496429"><div class="grid-product__spacer"><div class="grid-product__spacer-inner"></div></div><div class="grid-product__bg" style="background-color: rgb(179, 180, 165);"></div><div class="grid-product__image-wrap"><img src="./1882316946.jpg" title="Chicken Biryani" alt="Chicken Biryani" class="grid-product__picture" srcset="https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882316946.jpg 1x, https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882316946.jpg 2x" style="width: 100%; height: 100%;"></div><div class="grid-product__shadow ec-text-muted"><div class="grid-product__shadow-inner">Chicken Biryani</div></div><div class="grid__clearfix"></div><div class="grid-product__hover-wrap"></div></a><a class="grid-product__title" href="https://ashifoods.wixsite.com/cali/online-store/Chicken-Biryani-p276496429"><div class="grid-product__title-inner">Chicken Biryani</div></a><div class="grid-product__price"><div class="grid-product__price-amount"><div class="grid-product__price-value ec-price-item">$10.00</div></div></div></div></div></div></div></div></div><div class="grid__list"></div></div><div class="ec-footer"><ul class="ec-footer__row" data-items="1"><li class="ec-footer__cell"><a class="ec-footer__link ec-link ec-link--muted link--icon-top footer__link--shopping-cart footer__link--empty" href="https://ashifoods.wixsite.com/cali/online-store/cart"><span class="svg-icon"><svg width="16" height="20" viewBox="0 0 16 20" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M1 5v13.006c0 .548.446.994.994.994h12.012c.548 0 .994-.446.994-.994V5H1zm15-1v14.006c0 1.1-.895 1.994-1.994 1.994H1.994C.894 20 0 19.105 0 18.006V4h16z" fill="currentColor" fill-rule="nonzero"></path><path d="M5 7s-.005.5-.504.5C3.996 7.5 4 7 4 7V4c0-2.21 1.79-4 4-4s4 1.79 4 4v3s-.002.5-.5.5S11 7 11 7V4c0-1.657-1.343-3-3-3S5 2.343 5 4v3z" fill="currentColor"></path></g></svg></span>Shopping Bag</a></li></ul></div></div></div><div class="ec-store"><div class="ec-notices ec-notices--animation-default ec-notices--order-direct ec-notices--fixed ec-notices--top ec-notices--right"><div class="ec-notices__wrap"></div></div></div></div></div></div></div><div aria-hidden="true" style="display: none;"><div class="ec-wrapper"><div class="ec-store"><div class="ec-notices ec-notices--animation-default ec-notices--order-direct ec-notices--fixed ec-notices--top ec-notices--right"><div class="ec-notices__wrap"></div></div></div></div></div></div></div></div></div>
+			<div id="custom-html"></div>
+		</div>
+			<div id="static-html">
+				<div class="static-content" style="opacity: 1;">
+<style>
+	.ec-static-container__wait {
+		cursor: wait;
+	}
+
+	.ec-static-container__wait a {
+		cursor: wait !important;
+	}
+</style>
+
+<div class="ec-static-container">
+	<div class="ecwid ec-size ec-size--xxs ec-size--xs ec-size--s ec-size--m ec-size--l ec-size--xl">
+		<div class="ecwid-productBrowser ecwid-productBrowser-CategoryPage ecwid-productBrowser-CategoryPage-0">
+			<div class="ec-wrapper">
+				<div class="ec-store ec-store__category-page ec-store__category-page--0 ec-store--small-product-images">
+					<div class="ec-store__content-wrapper ec-store__content-wrapper--wide">
+						<div class="ec-grid">
+<div class="grid__categories grid__categories--advanced grid__categories--small-items grid__categories--aspect-ratio-1 " data-items="2" data-cols="6">
+		<div class="grid-category grid-category--id-72284944 grid-category--no-image  grid-category--has-shadow">
+			<div class="grid-category__wrap">
+				<div class="grid-category__wrap-inner">
+					<div class="grid-category__card">
+							<a class="grid-category__image" href="https://ashifoods.wixsite.com/cali/online-store/Sundays-c72284944" title="Sundays" data-category-id="72284944">
+								<div class="grid-category__bg">
+									<div class="grid-category__bg-color colored-background-4"></div>
+									<div class="grid-category__bg-image" style="background-image: url(&#39;&#39;);"></div>
+								</div>
+								<div class="grid-category__image-wrap">
+									<div class="grid-category__image-spacer">
+										<div class="grid-category__image-spacer-inner"></div>
+									</div>
+									<div class="grid-category__picture" style="background-image: url(&#39;&#39;);"></div>
+									<div class="grid__clearfix"></div>
+								</div>
+								<div class="grid-category__shadow">
+									<div class="grid-category__shadow-inner">Sundays</div>
+								</div>
+							</a>
+	<a class="grid-category__title" href="https://ashifoods.wixsite.com/cali/online-store/Sundays-c72284944" data-category-id="72284944">
+		<div class="grid-category__title-inner">Sundays</div>
+	</a>
+					</div>
+						<div class="grid-category__spacer">
+							<div class="grid-category__spacer-inner"></div>
+						</div>
+					<div class="grid__clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<div class="grid-category grid-category--id-72291488 grid-category--no-image  grid-category--has-shadow">
+			<div class="grid-category__wrap">
+				<div class="grid-category__wrap-inner">
+					<div class="grid-category__card">
+							<a class="grid-category__image" href="https://ashifoods.wixsite.com/cali/online-store/Everyday-c72291488" title="Everyday" data-category-id="72291488">
+								<div class="grid-category__bg">
+									<div class="grid-category__bg-color colored-background-8"></div>
+									<div class="grid-category__bg-image" style="background-image: url(&#39;&#39;);"></div>
+								</div>
+								<div class="grid-category__image-wrap">
+									<div class="grid-category__image-spacer">
+										<div class="grid-category__image-spacer-inner"></div>
+									</div>
+									<div class="grid-category__picture" style="background-image: url(&#39;&#39;);"></div>
+									<div class="grid__clearfix"></div>
+								</div>
+								<div class="grid-category__shadow">
+									<div class="grid-category__shadow-inner">Everyday</div>
+								</div>
+							</a>
+	<a class="grid-category__title" href="https://ashifoods.wixsite.com/cali/online-store/Everyday-c72291488" data-category-id="72291488">
+		<div class="grid-category__title-inner">Everyday</div>
+	</a>
+					</div>
+						<div class="grid-category__spacer">
+							<div class="grid-category__spacer-inner"></div>
+						</div>
+					<div class="grid__clearfix"></div>
+				</div>
+			</div>
+		</div>
+</div>
+
+
+								<div class="ec-page-title">
+									<h1 class="page-title__name ec-header-h1">Featured Products</h1>
+								</div>
+
+<div class="grid__wrap">
+
+	<div class="grid__wrap-inner">
+		<div class="grid__products grid__products--small-items grid__products--aspect-ratio-1 grid__products--appearance-frame grid__products--layout-center " data-items="3" data-cols="6">
+			<div class="grid-product grid-product--id-276511024  grid-product--has-shadow  grid-product--dark ec-store-productsGrid-cell-zeroPrice ">
+				<div class="grid-product__wrap" data-product-id="276511024">
+					<div class="grid-product__wrap-inner">
+	<a class="grid-product__image" href="https://ashifoods.wixsite.com/cali/online-store/Zinger-Burger-p276511024" data-product-id="276511024">
+		<div class="grid-product__spacer">
+			<div class="grid-product__spacer-inner"></div>
+		</div>
+			<div class="grid-product__bg" style="background-color: rgba(198,131,119,1);"></div>
+		<div class="grid-product__image-wrap">
+
+				<img class="grid-product__picture" src="./1882363734.jpg" style="width:100%;height:100%" title="Zinger Burger" alt="Zinger Burger" srcset="https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882363734.jpg 1x, https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882363734.jpg 2x">
+		</div>
+		<div class="grid-product__shadow ec-text-muted">
+			<div class="grid-product__shadow-inner">Zinger Burger</div>
+		</div>
+		<div class="grid-product__hover-wrap">
+		</div>
+		<div class="grid__clearfix"></div>
+	</a>
+
+	<a class="grid-product__title" href="https://ashifoods.wixsite.com/cali/online-store/Zinger-Burger-p276511024" data-product-id="276511024">
+		<div class="grid-product__title-inner">Zinger Burger</div>
+	</a>
+	<div class="grid-product__price">
+		<div class="grid-product__price-amount"><div class="grid-product__price-value ec-price-item">		$0.00
+</div></div>
+	</div>
+					</div>
+				</div>
+			</div>
+			<div class="grid-product grid-product--id-276507040  grid-product--has-shadow  grid-product--dark  ">
+				<div class="grid-product__wrap" data-product-id="276507040">
+					<div class="grid-product__wrap-inner">
+	<a class="grid-product__image" href="https://ashifoods.wixsite.com/cali/online-store/Nihari-p276507040" data-product-id="276507040">
+		<div class="grid-product__spacer">
+			<div class="grid-product__spacer-inner"></div>
+		</div>
+			<div class="grid-product__bg" style="background-color: rgba(92,77,63,1);"></div>
+		<div class="grid-product__image-wrap">
+
+				<img class="grid-product__picture" src="./1882313613.jpg" style="width:100%;height:100%" title="Nihari" alt="Nihari" srcset="https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882313613.jpg 1x, https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882313613.jpg 2x">
+		</div>
+		<div class="grid-product__shadow ec-text-muted">
+			<div class="grid-product__shadow-inner">Nihari</div>
+		</div>
+		<div class="grid-product__hover-wrap">
+		</div>
+		<div class="grid__clearfix"></div>
+	</a>
+
+	<a class="grid-product__title" href="https://ashifoods.wixsite.com/cali/online-store/Nihari-p276507040" data-product-id="276507040">
+		<div class="grid-product__title-inner">Nihari</div>
+	</a>
+	<div class="grid-product__price">
+		<div class="grid-product__price-amount"><div class="grid-product__price-value ec-price-item">		$10.00
+</div></div>
+	</div>
+					</div>
+				</div>
+			</div>
+			<div class="grid-product grid-product--id-276496429  grid-product--has-shadow  grid-product--dark  ">
+				<div class="grid-product__wrap" data-product-id="276496429">
+					<div class="grid-product__wrap-inner">
+	<a class="grid-product__image" href="https://ashifoods.wixsite.com/cali/online-store/Chicken-Biryani-p276496429" data-product-id="276496429">
+		<div class="grid-product__spacer">
+			<div class="grid-product__spacer-inner"></div>
+		</div>
+			<div class="grid-product__bg" style="background-color: rgba(179,180,165,1);"></div>
+		<div class="grid-product__image-wrap">
+
+				<img class="grid-product__picture" src="./1882316946.jpg" style="width:100%;height:100%" title="Chicken Biryani" alt="Chicken Biryani" srcset="https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882316946.jpg 1x, https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882316946.jpg 2x">
+		</div>
+		<div class="grid-product__shadow ec-text-muted">
+			<div class="grid-product__shadow-inner">Chicken Biryani</div>
+		</div>
+		<div class="grid-product__hover-wrap">
+		</div>
+		<div class="grid__clearfix"></div>
+	</a>
+
+	<a class="grid-product__title" href="https://ashifoods.wixsite.com/cali/online-store/Chicken-Biryani-p276496429" data-product-id="276496429">
+		<div class="grid-product__title-inner">Chicken Biryani</div>
+	</a>
+	<div class="grid-product__price">
+		<div class="grid-product__price-amount"><div class="grid-product__price-value ec-price-item">		$10.00
+</div></div>
+	</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+						</div>
+
+
+<div class="ec-footer">
+	<ul class="ec-footer__row" data-items="1">
+		<li class="ec-footer__cell">
+			<a class="ec-footer__link ec-link ec-link--muted link--icon-top footer__link--shopping-cart footer__link--empty" href="https://ashifoods.wixsite.com/cali/online-store/cart">
+				<span class="svg-icon">
+					<svg width="16" height="20" viewBox="0 0 16 20" xmlns="http://www.w3.org/2000/svg">
+						<g fill="none" fill-rule="evenodd"><path d="M1 5v13.006c0 .548.446.994.994.994h12.012c.548 0 .994-.446.994-.994V5H1zm15-1v14.006c0 1.1-.895 1.994-1.994 1.994H1.994C.894 20 0 19.105 0 18.006V4h16z" fill="currentColor" fill-rule="nonzero"></path>
+							<path d="M5 7s-.005.5-.504.5C3.996 7.5 4 7 4 7V4c0-2.21 1.79-4 4-4s4 1.79 4 4v3s-.002.5-.5.5S11 7 11 7V4c0-1.657-1.343-3-3-3S5 2.343 5 4v3z" fill="currentColor"></path>
+						</g>
+					</svg>
+				</span>
+Shopping Bag			</a>
+		</li>
+	</ul>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+					<script>
+						    var EcStaticPageUtils = (function () {
+
+		function isEmpty(str) {
+			return (!str || 0 === str.length);
+		}
+
+		function isNotEmpty(str) {
+			return !isEmpty(str);
+		}
+
+		function findFirstNotEmpty(urlArray) {
+			if (!urlArray) {
+				return "";
+			}
+
+			for (var i = 0; i < urlArray.length; i++) {
+				if (isNotEmpty(urlArray[i])) {
+					return urlArray[i];
+				}
+			}
+
+			return "";
+		}
+
+		return {
+			findFirstNotEmpty: function(urlArray) { return findFirstNotEmpty(urlArray); },
+			isEmpty: function(str) { return isEmpty(str); },
+			isNotEmpty: function(str) { return isNotEmpty(str); }
+		};
+    }) ();
+	
+	(function processProductPictures() {
+		var productsPicturesData = buildProductPicturesData();
+		var lastWidth = document.body.clientWidth;
+
+		function buildProductPicturesData() {
+			return [ {
+				thumbnailUrl: "https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882363734.jpg",
+				originalImageUrl: "https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882363730.jpg",
+				hdThumbnailUrl: "https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882363733.jpg",
+				pictureUrl: "https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882363732.jpg",
+				additionalImage: {
+					thumbnailUrl: "",
+					originalImageUrl: "",
+					hdThumbnailUrl: "",
+					pictureUrl: "",
+					borderInfo: {
+						alpha: "",
+	   					red: "",
+						green: "",
+						blue: ""
+					}
+				}
+			}
+                , {
+				thumbnailUrl: "https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882313613.jpg",
+				originalImageUrl: "https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882313609.jpg",
+				hdThumbnailUrl: "https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882313612.jpg",
+				pictureUrl: "https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882313611.jpg",
+				additionalImage: {
+					thumbnailUrl: "",
+					originalImageUrl: "",
+					hdThumbnailUrl: "",
+					pictureUrl: "",
+					borderInfo: {
+						alpha: "",
+	   					red: "",
+						green: "",
+						blue: ""
+					}
+				}
+			}
+                , {
+				thumbnailUrl: "https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882316946.jpg",
+				originalImageUrl: "https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882316942.jpg",
+				hdThumbnailUrl: "https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882316945.jpg",
+				pictureUrl: "https://d2j6dbq0eux0bg.cloudfront.net/images/44148381/1882316944.jpg",
+				additionalImage: {
+					thumbnailUrl: "",
+					originalImageUrl: "",
+					hdThumbnailUrl: "",
+					pictureUrl: "",
+					borderInfo: {
+						alpha: "",
+	   					red: "",
+						green: "",
+						blue: ""
+					}
+				}
+			}
+                
+			];
+		}
+
+		function addSrcSetAttribute(element, retinaThumbnailUrl) {
+			if (!element) {
+				return;
+			}
+			var thumbnailUrl = element.getAttribute('src');
+
+			var srcSetAttribute;
+			if (EcStaticPageUtils.isNotEmpty(thumbnailUrl) && EcStaticPageUtils.isNotEmpty(retinaThumbnailUrl)) {
+				srcSetAttribute = thumbnailUrl + " 1x, " + retinaThumbnailUrl + " 2x";
+			} else if (EcStaticPageUtils.isNotEmpty(thumbnailUrl)) {
+				srcSetAttribute = thumbnailUrl + " 1x";
+			} else if (EcStaticPageUtils.isNotEmpty(retinaThumbnailUrl)) {
+				srcSetAttribute = retinaThumbnailUrl + " 2x";
+			}
+
+			if (srcSetAttribute) {
+				var lazyLoadingEnabled = "false";
+				if (lazyLoadingEnabled === "true") {
+					element.setAttribute("data-srcset", srcSetAttribute);
+				} else {
+					element.setAttribute("srcset", srcSetAttribute);
+				}
+			}
+		}
+
+		function setBackgroundImageStyle(element, thumbnailUrl, retinaThumbnailUrl, borderInfo) {
+			if (!element || !borderInfo || (EcStaticPageUtils.isEmpty(thumbnailUrl) && EcStaticPageUtils.isEmpty(retinaThumbnailUrl))) {
+				return;
+			}
+
+			var notEmptyRetinaThumbnailUrl = retinaThumbnailUrl;
+			if (EcStaticPageUtils.isEmpty(retinaThumbnailUrl)) {
+				notEmptyRetinaThumbnailUrl = thumbnailUrl;
+			}
+
+			element.setAttribute("style", "background-image: url("
+					+ thumbnailUrl
+					+ "); background-image: -webkit-image-set(url("
+					+ thumbnailUrl
+					+ ") 1x, url("
+					+ notEmptyRetinaThumbnailUrl
+					+ ") 2x); background-image: -moz-image-set(url("
+					+ thumbnailUrl
+					+ ") 1x, url("
+					+ notEmptyRetinaThumbnailUrl
+					+ ") 2x); background-image: -o-image-set(url("
+					+ thumbnailUrl
+					+ ") 1x, url("
+					+ notEmptyRetinaThumbnailUrl
+					+ ") 2x); background-image: -ms-image-set(url("
+					+ thumbnailUrl
+					+ ") 1x, url("
+					+ notEmptyRetinaThumbnailUrl
+					+ ") 2x);"
+					+ backgroundColor(borderInfo));
+		}
+
+		function backgroundColor(borderInfo) {
+			if (borderInfo.alpha == 0) {
+				return "";
+			}
+
+			return " background-color: rgba" + "(" + borderInfo.red + ", "
+					+ borderInfo.green
+					+ ", " + borderInfo.blue + ", 1)"
+		}
+
+		function hdProductImage(pictureModel) {
+			var imageSize = "SMALL";
+			var browserWidth = document.body.clientWidth;
+
+			switch (imageSize) {
+				case "SMALL":
+					if (browserWidth < 520) {
+						return hdThumbnailUrl(pictureModel);
+					}
+
+					return thumbnailUrl(pictureModel);
+				case "MEDIUM":
+					return hdThumbnailUrl(pictureModel);
+				case "LARGE":
+					return pictureUrl(pictureModel);
+			}
+		}
+
+		function productImage(pictureModel) {
+			var imageSize = "SMALL";
+
+			switch (imageSize) {
+				case "SMALL":
+				case "MEDIUM":
+					return thumbnailUrl(pictureModel);
+				case "LARGE":
+					return hdThumbnailUrl(pictureModel);
+			}
+		}
+
+		function hdThumbnailUrl(pictureModel) {
+			var urls = [
+				pictureModel.hdThumbnailUrl,
+				pictureModel.thumbnailUrl,
+				pictureModel.pictureUrl,
+				pictureModel.originalImageUrl
+			];
+
+			return EcStaticPageUtils.findFirstNotEmpty(urls);
+		}
+
+		function thumbnailUrl(pictureModel) {
+			var urls = [
+				pictureModel.thumbnailUrl,
+				pictureModel.hdThumbnailUrl,
+				pictureModel.pictureUrl,
+				pictureModel.originalImageUrl
+			];
+
+			return EcStaticPageUtils.findFirstNotEmpty(urls);
+		}
+
+		function pictureUrl(pictureModel) {
+			var urls = [
+				pictureModel.pictureUrl,
+				pictureModel.hdThumbnailUrl,
+				pictureModel.originalImageUrl,
+				pictureModel.thumbnailUrl
+			];
+
+			return EcStaticPageUtils.findFirstNotEmpty(urls);
+		}
+
+		function process() {
+			var pictureElements = document.querySelectorAll('.grid-product__image');
+
+			if (productsPicturesData.length !== pictureElements.length) {
+				return;
+			}
+
+			productsPicturesData.forEach(function (item, i) {
+				var pictureElement = pictureElements[i].querySelector('.grid-product__picture');
+				var additionalPictureElement = pictureElements[i].querySelector('.grid-product__picture-additional');
+
+				addSrcSetAttribute(pictureElement, hdProductImage(item));
+				setBackgroundImageStyle(additionalPictureElement, productImage(item.additionalImage), hdProductImage(item.additionalImage), item.additionalImage.borderInfo);
+			});
+		}
+
+		function onResize() {
+			if (document.body.clientWidth !== lastWidth) {
+				lastWidth = document.body.clientWidth;
+				process();
+			}
+		}
+
+		window.addEventListener("resize", onResize);
+		process();
+	})();
+
+	(function processRibbonColor() {
+
+		function getColorValues(color) {
+			if (!color)
+				return;
+			if (color.toLowerCase() === 'transparent')
+				return [0, 0, 0, 0];
+			if (color[0] === '#') {
+				// #12345 invalid color
+				if (color.length == 6)
+					return;
+				if (color.length < 7) {
+					// convert #RGB and #RGBA to #RRGGBB and #RRGGBBAA
+					var r = color[1],
+						g = color[2],
+						b = color[3],
+						a = color[4];
+					color = '#' + r + r + g + g + b + b + (color.length > 4 ? a + a : '');
+				}
+				return [
+					parseInt(color.substr(1, 2), 16),
+					parseInt(color.substr(3, 2), 16),
+					parseInt(color.substr(5, 2), 16),
+					color.length > 7 ? parseInt(color.substr(7, 2), 16)/255 : 1
+				];
+			}
+			if (color.indexOf('rgb') === -1) {
+				// convert named colors
+				var tmp = document.body.appendChild(document.createElement('fictum')); // intentionally use unknown tag to lower chances of css rule override with !important
+				var flag = 'rgb(1, 2, 3)'; // this flag tested on chrome 59, ff 53, ie9, ie10, ie11, edge 14
+				tmp.style.color = flag;
+				if (tmp.style.color !== flag)
+					return; // color set failed - some monstrous css rule is probably taking over the color of our object
+				tmp.style.color = color;
+				if (tmp.style.color === flag || tmp.style.color === '')
+					return; // color parse failed
+				color = getComputedStyle(tmp).color;
+				document.body.removeChild(tmp);
+			}
+			if (color.indexOf('rgb') === 0) {
+				if (color.indexOf('rgba') === -1)
+					color += ',1'; // convert 'rgb(R,G,B)' to 'rgb(R,G,B)A' which looks awful but will pass the regxep below
+				return color.match(/[\.\d]+/g).map(function (a) {
+					return +a
+				});
+			}
+		}
+
+		function isColorDark(color) {
+			var c = getColorValues(color);
+			// расчет Photoshop’s RGB-to-Greyscale на основе HSP Color Model http://alienryderflex.com/hsp.html
+			var hsp = Math.sqrt(
+				0.299 * (c[0] * c[0]) +
+				0.587 * (c[1] * c[1]) +
+				0.114 * (c[2] * c[2])
+			);
+			// считаем цвет темным если его яркость не больше 200
+			return !!(hsp <= 200);
+		}
+
+		function process() {
+			var ribbonElements = document.querySelectorAll('.grid-product__label');
+
+			if (ribbonElements) {
+				ribbonElements.forEach(function (item, i) {
+					var ribbonElement = ribbonElements[i].querySelector('.ec-label');
+					var color = ribbonElement.style.color;
+					if (color) {
+						ribbonElement.classList.toggle('label--inversed', !isColorDark(color));
+					}
+				});
+			}
+		}
+
+		process();
+	})();
+
+	
+	(function processCategoryPictures() {
+		var categoryPicturesData = buildCategoryPicturesData();
+		var lastWidth = document.body.clientWidth;
+		var sizeBorder = 400;
+
+		function buildCategoryPicturesData() {
+			return [ {
+				hdThumbnailUrl: "",
+				mainImageUrl: "",
+				originalImageUrl: "",
+				pictureUrl: "",
+				pictureWidth: "0",
+				pictureHeight: "0"
+			}
+                , {
+				hdThumbnailUrl: "",
+				mainImageUrl: "",
+				originalImageUrl: "",
+				pictureUrl: "",
+				pictureWidth: "0",
+				pictureHeight: "0"
+			}
+                
+			];
+		}
+
+		function setBackgroundImageStyle(element, thumbnailUrl, retinaThumbnailUrl) {
+			if (!element || (EcStaticPageUtils.isEmpty(thumbnailUrl) && EcStaticPageUtils.isEmpty(retinaThumbnailUrl))) {
+				return;
+			}
+
+			var notEmptyRetinaThumbnailUrl = retinaThumbnailUrl;
+			if (EcStaticPageUtils.isEmpty(retinaThumbnailUrl)) {
+				notEmptyRetinaThumbnailUrl = thumbnailUrl;
+			}
+
+			element.setAttribute("style", "background-image: url("
+					+ thumbnailUrl
+					+ "); background-image: -webkit-image-set(url("
+					+ thumbnailUrl
+					+ ") 1x, url("
+					+ notEmptyRetinaThumbnailUrl
+					+ ") 2x); background-image: -moz-image-set(url("
+					+ thumbnailUrl
+					+ ") 1x, url("
+					+ notEmptyRetinaThumbnailUrl
+					+ ") 2x); background-image: -o-image-set(url("
+					+ thumbnailUrl
+					+ ") 1x, url("
+					+ notEmptyRetinaThumbnailUrl
+					+ ") 2x); background-image: -ms-image-set(url("
+					+ thumbnailUrl
+					+ ") 1x, url("
+					+ notEmptyRetinaThumbnailUrl
+					+ ") 2x);");
+		}
+
+		function categoryImage(pictureModel) {
+			var imageSize = "SMALL";
+			switch (imageSize) {
+				case "SMALL":
+				case "MEDIUM":
+					return thumbnailUrl(pictureModel);
+				case "LARGE":
+					return hdThumbnailUrl(pictureModel);
+			}
+		}
+
+		function hdCategoryImage(pictureModel) {
+			var imageSize = "SMALL";
+			var browserWidth = document.body.clientWidth;
+			switch (imageSize) {
+				case "SMALL":
+					if (browserWidth < 520) {
+						return hdThumbnailUrl(pictureModel);
+					}
+					return thumbnailUrl(pictureModel);
+				case "MEDIUM":
+					return hdThumbnailUrl(pictureModel);
+				case "LARGE":
+					if (browserWidth < 1060) {
+						return hdThumbnailUrl(pictureModel);
+					}
+					return mainImageUrl(pictureModel)
+			}
+		}
+
+		function hdThumbnailUrl(pictureModel) {
+			var urls = [
+				pictureModel.hdThumbnailUrl,
+				pictureModel.mainImageUrl,
+				pictureModel.originalImageUrl,
+				pictureModel.pictureUrl
+			];
+
+			return EcStaticPageUtils.findFirstNotEmpty(urls);
+		}
+
+		function mainImageUrl(pictureModel) {
+			var urls = [
+				pictureModel.mainImageUrl,
+				pictureModel.originalImageUrl,
+				pictureModel.pictureUrl
+			];
+
+			return EcStaticPageUtils.findFirstNotEmpty(urls);
+		}
+
+		function thumbnailUrl(pictureModel) {
+			if (pictureModel.pictureWidth < sizeBorder && pictureModel.pictureHeight < sizeBorder) {
+				return hdThumbnailUrl(pictureModel);
+			} else {
+				return pictureModel.pictureUrl;
+			}
+		}
+
+		function process() {
+			var categoryImageElements = document.querySelectorAll('.grid-category__image');
+
+			if (categoryImageElements.length !== categoryPicturesData.length) {
+				return;
+			}
+
+			categoryPicturesData.forEach(function (item, i) {
+				var categoryImageUrl = categoryImage(item);
+				var hdCategoryImageUrl = hdCategoryImage(item);
+				var categoryPictureElement = categoryImageElements[i].querySelector('.grid-category__picture');
+				var categoryBgImageElement = categoryImageElements[i].querySelector('.grid-category__bg-image');
+
+				setBackgroundImageStyle(categoryPictureElement, categoryImageUrl, hdCategoryImageUrl);
+				setBackgroundImageStyle(categoryBgImageElement, categoryImageUrl, hdCategoryImageUrl);
+			});
+		}
+
+		function onResize() {
+			if (document.body.clientWidth !== lastWidth) {
+				lastWidth = document.body.clientWidth;
+				process();
+			}
+		}
+
+		window.addEventListener("resize", onResize);
+		process();
+	})();
+
+
+(function() {
+
+	window.ec = window.ec || {};
+	if (window.ec.static_category_evaluated === true) {
+		return;
+	}
+	window.ec.static_category_evaluated = true;
+
+	var Grid = function() {
+		var params = {
+			productListImageSize : "SMALL",
+			categoryImageSize : "SMALL",
+			productCellSpacing : "",
+			categoryCellSpacing : ""
+		};
+		var settings = {
+			productBreakpoints: {
+				LARGE : [0, 680, 1060, 1440, 10000],
+				MEDIUM : [0, 260, 680, 1060, 1370, 1700, 10000],
+				SMALL : [0, 260, 520, 680, 870, 1060, 1280, 1450, 1750, 10000]
+			},
+			categoryBreakpoints: {
+				LARGE : [0, 680, 1060, 1440, 10000],
+				MEDIUM : [0, 480, 680, 1060, 1370, 1700, 10000],
+				SMALL : [0, 390, 520, 680, 870, 1060, 1280, 1450, 1750, 10000]
+			}
+		};
+
+		function setAttributes(grids, breakpoints) {
+			if (!grids) {
+				return;
+			}
+			grids.forEach(function (grid) {
+				var w = grid.offsetWidth;
+				var columnCount = 0;
+				for (var i = 1; i <= breakpoints.length; i++) {
+					if (w < Math.ceil(breakpoints[i])) {
+						if (i !== columnCount) {
+							columnCount = i;
+							grid.setAttribute('data-cols', i);
+						}
+						break;
+					}
+				}
+			});
+		}
+
+		function checkProductGridsLayout() {
+			var productGrids = document.querySelectorAll('.grid__products');
+			var productBreakpoints = settings.productBreakpoints[params.productListImageSize];
+			setAttributes(productGrids, productBreakpoints);
+		}
+
+		function checkCategoryGridsLayout() {
+			var categoryGrids = document.querySelectorAll('.grid__categories');
+			var categoryBreakpoints = settings.categoryBreakpoints[params.categoryImageSize];
+			setAttributes(categoryGrids, categoryBreakpoints);
+		}
+
+		function checkLayout() {
+			checkProductGridsLayout();
+			checkCategoryGridsLayout();
+		}
+
+		function setCellInterval(p, c) {
+			var style = document.getElementById('customCss') || document.createElement('div');
+			style.id = 'customCss';
+			document.body.appendChild(style);
+
+			var css = '';
+			if (+p == p && p != "" ) {
+				p = +p;
+				css += '.ec-size .ec-store .grid__products { margin-left: -' + Math.max(0, p/2 - .4) + 'px; margin-right: -' + p/2 + 'px; }';
+				css += '.ec-size .ec-store .grid__products .grid-product__wrap { padding: ' + p/2 + 'px; }';
+
+				css += '.ec-size:not(.ec-size--s) .ec-store .grid__products { margin-left: -' + Math.max(0, Math.min(16, p) / 2 - .4) + 'px; margin-right: -' + Math.min(16, p) / 2 + 'px; }';
+				css += '.ec-size:not(.ec-size--s) .ec-store .grid__products .grid-product__wrap { padding: ' + Math.min(16, p) / 2 + 'px; }';
+			}
+
+			if (+c == c && c != "") {
+				c = +c;
+				css += '.ec-size .ec-store .grid__categories { margin-left: -' + Math.max(0, c/2 - .4) + 'px; margin-right: -' + c/2 + 'px; }';
+				css += '.ec-size .ec-store .grid-category__wrap { padding: ' + c/2 + 'px; }';
+
+				css += '.ec-size:not(.ec-size--s) .ec-store .grid__categories { margin-left: -' + Math.max(0, Math.min(16, c) / 2 - .4) + 'px; margin-right: -' + Math.min(16, c) / 2 + 'px; }';
+				css += '.ec-size:not(.ec-size--s) .ec-store .grid__categories .grid-category__wrap { padding: ' + Math.min(16, c) / 2 + 'px; }';
+			}
+
+			style.innerHTML = '<style>' + css + '</style>';
+		}
+
+		function init() {
+			setCellInterval(params.productCellSpacing, params.categoryCellSpacing);
+			checkLayout();
+			window.addEventListener('resize', function() {
+				checkLayout();
+			});
+		}
+
+		init();
+	};
+
+	var ecwidContainer = document.querySelector('.ec-static-container .ec-size');
+	var breakpoints = {
+		320: 'ec-size--xxs',
+		414: 'ec-size--xs',
+		480: 'ec-size--s',
+		768: 'ec-size--m',
+		1024: 'ec-size--l',
+		1100: 'ec-size--xl',
+		1440: 'ec-size--xxl'
+	};
+
+	function onResize() {
+		var w = ecwidContainer.offsetWidth;
+		for (var i in breakpoints) {
+			if (w >= i) {
+				ecwidContainer.classList.add(breakpoints[i]);
+			}
+			else {
+				ecwidContainer.classList.remove(breakpoints[i]);
+			}
+		}
+	}
+	onResize();
+	window.addEventListener('load', onResize);
+	window.addEventListener('resize', onResize);
+
+	var links = document.querySelectorAll(".ec-static-container a");
+	for (var i = 0; i < links.length; i++) {
+		var link = links[i];
+		link.addEventListener('click',function(){
+			document.querySelector('.ec-static-container').classList.add("ec-static-container__wait");
+		})
+	}
+
+	var grid = new Grid();
+
+})();
+
+					</script>
+			</div>
+		<script>
+			var wix_site_url = (Wix.Utils.getViewMode() == 'site' ? 'https://ashifoods.wixsite.com/cali/online-store' : '')
+			var timeOfLastPageChanged = 0;
+
+			var currentPage = parseCurrentPage();
+			if (isValidPage(currentPage)) {
+				console && console.log("Current Ecwid page from storage: type - " + currentPage.type + ", hash - " + currentPage.hash);
+				switchStaticToDynamic();
+			}
+
+			Ecwid.customHistoryStateHandler = function (state) {
+				console && console.log("Ecwid.customHistoryStateHandler(" + state + ")");
+				if (Wix.Utils.getViewMode() != 'editor') {
+					ecwidState.pushState(state);
+				}
+			};
+
+			function parseCurrentPage() {
+				try {
+					return JSON.parse(getCurrentPageFromStorage());
+				} catch (e) {
+					console && console.log("Error occured while parsing JSON with widget, opening the main page");
+				}
+			}
+
+			function getElementTopOffset(elementId) {
+				var element = document.getElementById(elementId);
+				if (element) {
+					return element.getBoundingClientRect().top;
+				}
+				return 0;
+			}
+
+			Ecwid.OnAPILoaded.add(function() {
+				if (!isInsideWixEditor()) {
+					Wix.addEventListener(Wix.Events.CONSENT_POLICY_UPDATE, function(data) {
+						var ecwidConsent = getEcwidConsentByWixConsentPolicy(data);
+						if (ecwidConsent != null) {
+							setEcwidTrackingConsent(ecwidConsent);
+							Ecwid.setTrackingConsent(ecwidConsent ? "ACCEPT" : "DECLINE");
+						}
+					});
+				}
+			});
+
+			Ecwid.OnPageLoad.add(function(page) {
+				var checkoutElementId;
+				switch (page.type) {
+					case "CHECKOUT_PAYMENT_DETAILS":
+						checkoutElementId = "ec-cart-step--payment";
+						break;
+					case "CHECKOUT_ADDRESS":
+						checkoutElementId = "ec-cart-step--address";
+						break;
+					case "CHECKOUT_DELIVERY":
+						checkoutElementId = "ec-cart-step--delivery";
+				}
+				if (!checkoutElementId) {
+					return;
+				}
+				getWixTop(function (top) {
+					Wix.scrollTo(0, getElementTopOffset(checkoutElementId) + top);
+				});
+			});
+
+			Ecwid.OnCartChanged.add(function (cart) {
+				Wix.PubSub.publish("ecwid_cart_changed", {cart: cart}, false);
+			});
+
+			var timeout = null;
+
+			function switchStaticToDynamic() {
+				if (!!ec && !!ec.storefront && !!ec.storefront.staticPages && !!ec.storefront.staticPages.switchStaticToDynamic) {
+					ec.storefront.staticPages.switchStaticToDynamic();
+				}
+			}
+
+			function OneTimePageNavigation(callback) {
+				if (!!timeout) {
+					clearTimeout(timeout);
+				}
+				timeout = setTimeout(function () {
+					callback.call();
+					timeout = null;
+				}, 100);
+			}
+
+			if (window.location.search.indexOf("send-refresh=true") > 0) {
+				Wix.PubSub.publish('settings_changed', {}, false);
+			}
+
+			var waitForPubSubIsReady = function (onReadyCallback) {
+				var timerSubName = "wait_for_pubsub_is_ready";
+				var lastSubId = null;
+				var pubSubReady = false;
+				var unsubscribe = function (subId) {
+					if (subId) {
+						Wix.PubSub.unsubscribe(timerSubName, lastSubId);
+					}
+				};
+				var pubsubInterval = setInterval(function () {
+					unsubscribe(lastSubId);
+					lastSubId = Wix.PubSub.subscribe(timerSubName, function (event) {
+						unsubscribe(lastSubId);
+						clearInterval(pubsubInterval);
+						if (pubSubReady) {
+							return;
+						}
+
+						pubSubReady = true;
+						onReadyCallback();
+					}, true);
+
+					Wix.PubSub.publish(timerSubName, {}, true);
+				}, 50);
+			};
+
+			waitForPubSubIsReady(function () {
+				Wix.PubSub.subscribe('ecwid_page_changed', function (event) {
+					var page = parseCurrentPage();
+					if (isValidPage(page)) {
+						console && console.log("state: ecwid_page_changed: type - " + page.type + ", hash - " + page.hash);
+						changePage(page.type, page.hash);
+						removeCurrentPageFromStorage();
+					}
+				}, true);
+
+				Wix.PubSub.subscribe('settings_changed', function (event) {
+					var hash = window.location.hash;
+					var url = window.location.href.replace("send-refresh=true", "").replace(hash, "") + "&" + Math.random() + hash;
+					window.location = url;
+				}, false);
+			});
+
+			function isValidPage(page) {
+				return !!page && !!page.type && !!page.hash;
+			}
+
+			function changePage(type, hash) {
+				switch (type) {
+					case 'CART':
+					case 'CATEGORY':
+					case 'SEARCH':
+						switchStaticToDynamic();
+						OneTimePageNavigation(function () {
+							if (type == 'SEARCH') {
+								location.hash = decodeURI(hash);
+								ecwidState.pushState(decodeURI(hash.substring(1)));
+							} else {
+								location.hash = hash;
+								ecwidState.pushState(hash.substring(1));
+							}
+							Wix.PubSub.publish("ecwid_page_changed", {type: "noop"}, true);
+							timeOfLastPageChanged = Date.now();
+						});
+						break;
+					default:
+						OneTimePageNavigation(function () {
+						});
+						break;
+				}
+			}
+		</script>
+	</div><script src="./states.js.download" charset="utf-8" type="text/javascript"></script><script src="./data.js.download" charset="utf-8" type="text/javascript"></script><div id="customCss"><style></style></div>
+
+
+<iframe id="ru.cdev.xnext.legacyfrontendstub.LegacyFrontendStub" class="fitvidsignore" tabindex="-1" style="position: absolute; width: 0px; height: 0px; border: none; left: -1000px; top: -1000px;" aria-hidden="true" src="./saved_resource(2).html"></iframe><div aria-hidden="true" style="display: none;"></div><div aria-hidden="true" style="position: fixed; overflow: hidden; z-index: 10000000; left: 0px; width: 100%; top: 0px; height: 100%; display: none;"><div class="ecwid-loadingIndicator-over" style="width: 100%; height: 100%; background-color: white; opacity: 0.6; position: absolute; left: 0px; top: 0px;"> </div><div class="ecwid-loadingIndicator" id="ecwid_loading_indicator" style="position: absolute; left: 0px; top: 0px;"><div class="gwt-HTML"><div class="loader loader-mixed"><div class="spinner-ball-outer"></div><div class="spinner-ball-inner"></div></div></div></div></div><div class="ecwid-loadingIndicator-cursor" style="position: fixed; overflow: hidden; z-index: 10000002; left: 0px; width: 100%; top: 0px; height: 100%; display: none;" aria-hidden="true"></div><div><div class="ec-popup ec-popup--m"><div class="ec-popup__overlay"></div><div class="ec-popup__wrap"><div class="ec-popup__control"><a class="ec-popup__control-inner ec-link ec-link--hover"><svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" stroke-linecap="round"><path d="M.5.5l11 11M.5 11.5l11-11"></path></g></svg></a></div><div class="ec-popup__body"><div class="ecwid"><div class="ec-size"><div class="ec-store ec-store__legal-page ec-store__legal-page--about"><div class="ec-store__content-wrapper"><div class="ec-page-links" hidden=""><ul class="ec-page-links__wrapper"></ul></div><div class="ec-page-title"></div><div class="ec-page-body"><div class="ec-preloader ec-preloader--data ec-preloader--medium"><div class="ec-preloader__item"><div class="ec-preloader__inner"></div></div><div class="ec-preloader__item"><div class="ec-preloader__inner"></div></div><div class="ec-preloader__item"><div class="ec-preloader__inner"></div></div></div></div><div class="ec-page-buttons" hidden=""><div class="ec-page-button ec-page-button--print"><div class="form-control form-control--button form-control--medium form-control--secondary form-control--flexible form-control--done"><button class="form-control__button" type="button"><span class="form-control__button-text">Print</span></button></div></div></div></div></div></div></div></div></div></div></div><div class="ecwid-pswp" aria-modal="true" aria-label="Images Gallery" aria-describedby="ecwid-pswp-counter"><div id="ecwid-pswp-template" class="pswp" tabindex="-1" aria-hidden="true" style="z-index: 1000002;"><div class="pswp__bg"></div><div class="pswp__scroll-wrap"><div class="pswp__container" aria-hidden="true"><div class="pswp__item"></div><div class="pswp__item"></div><div class="pswp__item"></div></div><div class="pswp__ui pswp__ui--hidden"><div class="pswp__top-bar"><div class="pswp__counter" id="ecwid-pswp-counter" aria-live="polite"></div><button class="pswp__button pswp__button--close" title="Close (Esc)" aria-label="Close"></button><button class="pswp__button pswp__button--share" title="Share" aria-label="Share"></button><button class="pswp__button pswp__button--fs" title="Toggle fullscreen" aria-label="Toggle fullscreen"></button><button class="pswp__button pswp__button--zoom" title="Zoom in/out" aria-label="Zoom in/out"></button><div class="pswp__preloader"><div class="pswp__preloader__icn"><div class="pswp__preloader__cut"><div class="pswp__preloader__donut"></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class="pswp__share-tooltip"></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)" aria-label="Previous"></button><button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)" aria-label="Next"></button><div class="pswp__caption"><div class="pswp__caption__center"></div></div></div></div></div></div></body></html>
