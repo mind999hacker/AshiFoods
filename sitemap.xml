@@ -9,17 +9,12 @@
 
 <url>
   <loc>http://ashifoods.cf/</loc>
-  <lastmod>2021-02-23T08:05:26+00:00</lastmod>
+  <lastmod>2021-02-23T23:15:25+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://ashifoods.cf/online-store/</loc>
-  <lastmod>2021-02-23T08:05:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://ashifoods.cf/menu/</loc>
-  <lastmod>2021-02-23T08:05:26+00:00</lastmod>
+  <loc>http://ashifoods.cf/store/</loc>
+  <lastmod>2021-02-23T23:15:25+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
